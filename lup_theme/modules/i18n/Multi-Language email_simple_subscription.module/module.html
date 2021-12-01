@@ -1,0 +1,11 @@
+{% import "/lup_themes/AA_lup_Theme-01/countryCodes.html" as countryCodes %}
+{% set fieldsByLocale = module[countryCodes.locale] %} 
+<!-- label="Backup Unsubscribe" -->
+{% email_simple_subscription 
+    "email_simple_subscription" 
+    label="{{ fieldsByLocale.label }}", 
+    header="{{ fieldsByLocale.header }}",
+    input_help_text="{{ fieldsByLocale.input_help_text }}", 
+    input_placeholder="{{ fieldsByLocale.input_placeholder }}", 
+    button_text="{{ fieldsByLocale.button_text }}"  
+%}

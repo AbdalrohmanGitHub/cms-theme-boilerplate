@@ -1,0 +1,15 @@
+{
+  "content_tags" : [ {
+    "name" : "COMMUNICATIONS",
+    "source" : "MARKETPLACE"
+  }, {
+    "name" : "COMPATIBLE_EMAIL",
+    "source" : "MARKETPLACE"
+  } ],
+  "extra_classes" : "widget-type-email_subscriptions",
+  "global" : false,
+  "icon" : "https://cdn2.hubspotqa.com/hubfs/99263981/high-forms-1.svg",
+  "host_template_types" : [ "EMAIL" ],
+  "module_id" : 50237761126,
+  "is_available_for_new_content" : true
+}

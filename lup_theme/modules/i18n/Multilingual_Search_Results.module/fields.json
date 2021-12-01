@@ -1,0 +1,814 @@
+[ {
+  "id" : "cbd47343-8232-3ff0-5757-c0c104454ca2",
+  "name" : "display_featured_images",
+  "display_width" : null,
+  "label" : "Display featured images",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+  "name" : "language",
+  "display_width" : null,
+  "label" : "Select language to edit",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "zh", "Chinese (China)" ], [ "zh_hk", "Chinese (Hong Kong)" ], [ "cs", "Czech" ], [ "da", "Danish" ], [ "nl", "Dutch" ], [ "en", "English" ], [ "fi", "Finnish" ], [ "fr", "French" ], [ "de", "German" ], [ "el", "greek" ], [ "it", "italian" ], [ "jp", "Japanese" ], [ "no", "Norwegian" ], [ "pl", "Polish" ], [ "pt", "Portuguese" ], [ "es", "Spanish (Mexico)" ], [ "sv", "Swedish" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "ff4f0a85-5a39-9ce2-4e50-2f092ac61526",
+  "name" : "EN",
+  "display_width" : null,
+  "label" : "English",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "en",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "697c5e2a-87f0-98f7-2f1e-3e793aa8c0fc",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "cd0dd31d-2506-beb8-6a37-2b2282f9df20",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Results for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Results for"
+  }
+}, {
+  "id" : "7d172928-f0a4-7163-90ca-d97e145678ba",
+  "name" : "DE",
+  "display_width" : null,
+  "label" : "German",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "de",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "63e11cbf-4afb-d511-63d2-7aeca42faa47",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "d473c94b-3fed-01a9-626c-ecb526578169",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "00dce6a2-49a1-2d6b-ae1a-772265962161",
+  "name" : "ZH",
+  "display_width" : null,
+  "label" : "Chinese (China)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "^zh$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "499f68a8-ed9c-ff54-6e89-c57a6a6613f4",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "d58d5a94-64de-5343-1f12-9aa439fb831d",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "29047249-9a75-7d4a-f4be-496a091b4a22",
+  "name" : "ZH_HK",
+  "display_width" : null,
+  "label" : "Chinese (Hong Kong)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "^zh_hk$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "afe25cb6-2d5a-ec32-dd77-ab0ab0147e7b",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "59fc410b-df48-7bde-0b1f-de8ad7e10a6d",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "346f7f40-2ef5-2497-4416-7bf3f1e6d7af",
+  "name" : "CS",
+  "display_width" : null,
+  "label" : "Czech",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "cs",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4146ad94-ad4b-130b-66e0-387a875fe221",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "f0230ac7-039f-5416-685c-d0ec0f1efdea",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "343adef0-578c-f639-0a9f-5c81e205b409",
+  "name" : "DA",
+  "display_width" : null,
+  "label" : "Danish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "da",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0c7cca20-bffa-3713-0316-0954bd9b39ec",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "ae43403a-2211-7429-96c2-159e70639dc9",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "49f4ce4c-d80c-76dc-28b8-641eb6318bf3",
+  "name" : "NL",
+  "display_width" : null,
+  "label" : "Dutch",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "nl",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "7a5b6da3-4ee9-7791-5fb5-595ce96727e7",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "339f2f0e-eccc-6cd6-4eb0-e3dce7e2d476",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "a008d03d-d3d5-0ba6-5ee8-594fd0aabd1f",
+  "name" : "FI",
+  "display_width" : null,
+  "label" : "Finnish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "fi",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "ad634ae0-1c2e-7fb6-a29c-f7a2907b1f18",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "65da0e91-ef3d-13fc-793e-0101658aaa4c",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "0d5af5a0-4895-30a3-7f2e-b8bab4698e68",
+  "name" : "FR",
+  "display_width" : null,
+  "label" : "French",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "fr",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "2d089d95-61f6-35b9-e22d-5f7e95f6e497",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "f9fcafc0-851c-1154-6318-ac0df9cf3688",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "81fbf523-ef10-5b34-272b-9703a5ac0b3c",
+  "name" : "EL",
+  "display_width" : null,
+  "label" : "Greek",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "el",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "57f8173a-9c26-761d-aed0-885fafac4981",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "0d003d23-fd51-78d4-4975-e90b48b2513b",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "c3ca2501-e8f4-ae3b-22c0-bb184bbe199d",
+  "name" : "IT",
+  "display_width" : null,
+  "label" : "Italian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "it",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "923afd26-c3eb-3b87-7f00-1c000e865f87",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "def2f922-a0f5-7430-6e18-3c5bde0ac229",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "c52e1cf6-4520-7f9a-c960-9be3f9fb0e9a",
+  "name" : "JP",
+  "display_width" : null,
+  "label" : "Japanese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "jp",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4e0f65a3-97eb-0cfd-7f71-13730ce8dde0",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "989bc711-b967-5535-0d24-058a611760d7",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "82bbf257-99b2-273b-8706-9d148d9622d7",
+  "name" : "NO",
+  "display_width" : null,
+  "label" : "Nowegian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "no",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "a5296460-80ef-2d92-35c9-4158f6d25695",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "7567de09-0c35-1dec-7a89-fdc3a724921a",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "cafb018b-fee4-9fe3-f0a3-d54fe80ed534",
+  "name" : "PL",
+  "display_width" : null,
+  "label" : "Polish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "pl",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "6654d721-02ad-8bb9-d38c-7a8ec100fe53",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "0f9d287d-05ce-8d98-f576-241136f4a356",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "7583504a-d10f-b72a-54e5-f4427826695d",
+  "name" : "PT",
+  "display_width" : null,
+  "label" : "Portuguese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "pt",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "abb9839e-064d-05ca-a332-7aca2e0d2e2f",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "694f5184-cee3-eb63-7925-ed683cd0d439",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "d77226fb-8765-e1d2-6d4e-1a7de3a91c84",
+  "name" : "ES",
+  "display_width" : null,
+  "label" : "Spanish (Spain)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "^es$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "36831c1b-329d-2457-454e-84cbdf1f01c2",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "23562067-5e5b-feb4-8ec3-ad5752ca848e",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "4d7672f4-b070-ae67-783d-fbf3be4993bd",
+  "name" : "ES_MX",
+  "display_width" : null,
+  "label" : "Spanish (Mexico)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "^es_mx$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4ee6c7e1-d8af-f738-3966-7e57aad0efca",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "29635e55-e6e9-8f71-21c3-8511b7848ace",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+}, {
+  "id" : "8443caa1-5a75-912b-0625-55fbea9cbdaf",
+  "name" : "SW",
+  "display_width" : null,
+  "label" : "Swedish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f159219a-7beb-b6d4-0bfe-1ae9b292a2db",
+    "controlling_value_regex" : "sv",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "b97456db-bda2-6401-39cc-b65972d19053",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "f3aa59df-b044-79b3-9514-76694d9ce04f",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ergebnisse for"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "subheader_text" : "Ergebnisse for"
+  }
+} ]

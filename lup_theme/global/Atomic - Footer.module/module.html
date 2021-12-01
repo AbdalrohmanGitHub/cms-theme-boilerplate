@@ -1,0 +1,22 @@
+		  <div class="atmc-footer"{% if module.settings.footer_background_option == 'color' %} style="background-color:{{ module.settings.footer_background_color.color }};"{% endif %}>
+      <div class="atmc-container">
+        <div class="row-fluid">
+          <div class="span7">
+						<div class="footer__copyright">
+							{{ module.copyright_text }}
+						</div>
+          </div>
+					{% if module.footer_menu %}
+						<div class="span5">
+							<div class="atmc-footer_menu">
+								{% simple_menu menu_tree="{{ module.footer_menu }}" %}
+							</div>
+						</div>
+					{% endif %}
+        </div>
+      </div>
+    </div>
+
+		  {% if theme.components_group.scroll_to_top %}
+			  <a href="#" class="atmc-scroll-top">{% icon name="chevron-up" style="SOLID" unicode="f077", no_wrapper=true %}</a>
+		  {% endif %}

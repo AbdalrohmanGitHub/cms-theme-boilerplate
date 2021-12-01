@@ -1,0 +1,28 @@
+{% import "/lup_themes/AA_lup_Theme-01/countryCodes.html" as countryCodes %}
+{% set fieldsByLocale = module[countryCodes.locale] %} 
+
+<div id="hs_cos_wrapper_search_results_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  <span id="hs_cos_wrapper_search_results_content_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+    <h1>{{ fieldsByLocale.subheader_text}} "{{ request.query_dict.term|escape }}"</h1>
+  </span>
+</div>
+<div id="hs_cos_wrapper_search_results" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  <div class="hs-search-results">
+    <template class="hs-search-results__template">
+      <li>
+        {% if module.display_featured_images %}
+          <div class="hs-search-results__featured-image">
+            <img src="">
+          </div>
+        {% endif %}
+        <a href="#" class="hs-search-results__title">Content Title</a>
+        <p class="hs-search-results__description">Description</p>
+      </li>
+    </template>
+    <ul id="hsresults" class="hs-search-results__listing"></ul>
+    <div class="hs-search-results__pagination" data-search-path="{{ site_settings.content_search_results_page_path }}">
+      <a href="" class="hs-search-results__prev-page"></a>
+      <a href="" class="hs-search-results__next-page"></a>
+    </div>  
+  </div> 
+</div>

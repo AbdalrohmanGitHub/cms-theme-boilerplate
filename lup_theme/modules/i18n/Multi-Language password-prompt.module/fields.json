@@ -1,0 +1,1435 @@
+[ {
+  "id" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+  "name" : "language",
+  "display_width" : null,
+  "label" : "Select language to edit",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "placeholder" : "Search",
+  "choices" : [ [ "zh", "Chinese (China)" ], [ "zh_hk", "Chinese (Hong Kong)" ], [ "cs", "Czech" ], [ "da", "Danish" ], [ "nl", "Dutch" ], [ "en", "English" ], [ "fi", "Finnish" ], [ "fr", "French" ], [ "de", "German" ], [ "el", "Greek" ], [ "it", "Italian" ], [ "jp", "Japanese" ], [ "no", "Norwegian" ], [ "pl", "Polish" ], [ "pt", "Portuguese" ], [ "es_mx", "Spanish (Mexico)" ], [ "es", "Spanish (Spain)" ], [ "sv", "Swedish" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "782e8722-964b-e167-5852-601137211ab2",
+  "name" : "EN",
+  "display_width" : null,
+  "label" : "English",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "en",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "20400e5d-02ad-2c6e-ece8-94a73cc82fb9",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Password Required"
+  }, {
+    "id" : "280f08c7-fd0a-4983-dce8-5ae43241cda6",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Please enter the password required to view this page."
+  }, {
+    "id" : "2f083331-34cc-4a75-cd82-8ff6e3e705f8",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Password"
+  }, {
+    "id" : "76cd5c08-8e51-974e-2a08-797b9147ce34",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Submit"
+  }, {
+    "id" : "b04411bc-c262-4a90-ce26-c6074db79c5b",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Sorry, please try again."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Password Required",
+    "subheader_text" : "Please enter the password required to view this page.",
+    "password_placeholder" : "Password",
+    "submit_button_text" : "Submit",
+    "bad_password_message" : "Sorry, please try again."
+  }
+}, {
+  "id" : "8adf4bab-948f-b44a-9ae5-67c41db9b842",
+  "name" : "DE",
+  "display_width" : null,
+  "label" : "German",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "de",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0b155751-c78f-eab3-e73f-1a6f66d0b28b",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "6f89c5ea-3128-57a6-7eea-07aeb68d61eb",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "fc72cb1c-2aa4-7e4f-e408-fad55bf543d3",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "00612755-503e-d5e0-819f-9989678c9d22",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "e41245d8-94a6-3093-3680-1e5659c33af4",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "ac6dcf0f-8036-e41c-7045-5c6789fa3e14",
+  "name" : "ZH",
+  "display_width" : null,
+  "label" : "Chinese (China)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^zh$",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "693e0293-7ebc-9f95-03f9-d913240a29cc",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "14197f43-37e5-6d00-0e10-709efb27b354",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "50f00d21-972c-ec22-6225-f02fad6a277f",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "e289dbd8-eb8a-8469-a153-6cb0a40be56f",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "cd4ade9a-4fb2-3298-b4fc-9d22f4ccd327",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "1262b1c5-715a-58ae-c0d3-8ba062d80038",
+  "name" : "ZH_HK",
+  "display_width" : null,
+  "label" : "Chinese (Hong Kong)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^zh_hk$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "44da2e3a-8aa1-c1d2-02bc-d8e63b044f19",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "22b64b08-2fcd-f001-0b28-d8220d74e435",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "99ffe811-3f99-0d06-7e00-c9536d545f61",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "2697a644-21fb-18b1-e1c6-e9047e58c8c4",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "126acd66-a787-4d9d-5e28-a64f5c7cb4b8",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "ef848e6f-4522-674b-33c4-eb3a8482aa0e",
+  "name" : "CS",
+  "display_width" : null,
+  "label" : "Czech",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "cs",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "228bd42c-f5ee-4c83-f420-cf62ca8ee2a5",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "32a39036-32ea-372f-c3a4-48baf2d1f53a",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "8ace7fcc-958a-859f-a402-f41bd6fda3cb",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "53bceed9-31ea-a49a-3260-78106f0380ab",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "e9a53ca3-577a-e514-349f-306726678057",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "12d0f26e-ea7e-8ae8-8853-f2fbcf8ad93d",
+  "name" : "DA",
+  "display_width" : null,
+  "label" : "Danish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "da",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "af59bd6e-ecb9-cb53-e5d8-96b3c852a935",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "0a6b51d1-2347-a15d-7cf6-0c4f4db9c3ca",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "cd9c13e2-59a6-7717-083f-30233cdb56b3",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "1cc82d62-6892-9152-19ea-f5c301ab5fa6",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "9e06f756-6d9f-6314-ecaa-3e4bc3b7ec48",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "fab3019d-02ce-0df4-a03e-9c0a7b272a0e",
+  "name" : "NL",
+  "display_width" : null,
+  "label" : "Dutch",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "nl",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "99b9cd9e-318f-8dae-1752-2a3ae96c62c4",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "c3582eea-8e9d-0e50-8299-63f3df225990",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "7e736898-0fa4-357e-59bf-0048339cd907",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "d5b32c0a-b3de-e029-7522-796db1aec8bb",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "18e82b98-5826-a35d-52ee-373707493e85",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "0bb7ec59-cd0d-3cb4-a7c8-fecd1f4f8d28",
+  "name" : "FI",
+  "display_width" : null,
+  "label" : "Finnish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "fi",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0ec439cf-2783-9b1b-e4a1-9a7d4ba9efa1",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "b7bbdc7d-eac8-6592-dda6-c3d2bac7d316",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "d9ad4342-0c6c-ec79-949e-eda891042753",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "c4445d07-1e79-d2ed-604d-34ed7e8094bb",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "508bd825-3f96-aeb7-7152-5213384189e7",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "72dbdbed-a7f6-a7ad-4072-78b74f0d7a6e",
+  "name" : "FR",
+  "display_width" : null,
+  "label" : "French",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "fr",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "214ae98e-ec1c-6e19-ae68-d5d698292d63",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "7ee37346-22ba-04f2-8374-a81f911c3aaa",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "e8d52be0-7f14-1087-64c7-a534acaed5f5",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "04a975cd-47bf-f996-efaf-9fd74928a7a8",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "b2f49cc9-9eff-a33d-a8f0-136ee9666fb7",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "058c1cb3-12fb-655a-8cc8-955ff46b2fe0",
+  "name" : "EL",
+  "display_width" : null,
+  "label" : "Greek",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "el",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4d5ae6b8-0c1b-d55c-853a-a38cb1aa1cfc",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "017bd330-2ddc-fc0b-de1c-6d7111db7486",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "7b825367-d2fa-b9ab-54a4-70ab3f8ca1d7",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "4fed4e2c-6a55-aac9-8894-3093e6fd96df",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "1c4537ca-fd03-4cd1-4c20-a455dc742f00",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "29719178-6df0-c6e4-d6b9-149bd6cf6e54",
+  "name" : "IT",
+  "display_width" : null,
+  "label" : "Italian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "it",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "68346cb4-bd5d-8256-3a0a-a30c3bc7f8f8",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "7041afdd-3802-0805-8108-1a053d55c210",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "e83d6620-1137-872e-33b6-91a47a642c3e",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "4dac2d6e-4b76-9999-1196-c1d3ceba3151",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "d5a2ec1c-88c6-7dc4-ce13-46b3b57c2a2b",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "53ee4965-b9f5-c6e7-f0b5-19e47a15dda1",
+  "name" : "JP",
+  "display_width" : null,
+  "label" : "Japanese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "jp",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "113f38bd-ea77-cbb8-8049-af64cc6fa342",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "69eced65-be93-2f5c-c587-e7ee25567c38",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "89ecbbcc-cb9c-49b0-6c02-3bda992f3a3a",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "407dabbf-3f47-e484-741f-ec2c1ea20487",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "85aa34d0-617c-1015-c5fc-9703f07505a7",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "2ffe5daf-5a88-75c8-8deb-3f4b02891376",
+  "name" : "NO",
+  "display_width" : null,
+  "label" : "Nowegian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "no",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "22789f7d-c16e-b132-986e-986c1917c1d8",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "5f1e507b-c62b-4551-0240-3bb35e6d5871",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "85ed393a-a397-6964-08f2-feeb0c4130b3",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "0016eb36-3b32-5432-e384-b839af443662",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "b709e269-d753-ac89-dc5e-ba7a3e37df0b",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "1b25c767-c642-5189-8d7e-221d332ce8ea",
+  "name" : "PL",
+  "display_width" : null,
+  "label" : "Polish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "pl",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "2e810628-4631-4e9f-907e-97239d28df84",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "f7780c7b-cc2e-4f33-68e5-a5e8a0a24d93",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "b0cbf374-56d6-fb19-69c0-5039bc9d5ca1",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "81c011ca-d466-3e77-a004-3df09fe80932",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "99d70689-6c98-a377-8cdd-7eeaa1eb7cdf",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "b25ffa35-ab60-fd35-85c2-93105a77066b",
+  "name" : "PT",
+  "display_width" : null,
+  "label" : "Portuguese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "pt",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "37e7d30c-5832-e746-8bce-42bad1b52920",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "8fe11eee-9968-883e-cb1d-f3b0cdcc2da8",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "23ce91bb-956c-d1ca-8034-d5fc398a759d",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "7778b1cd-e92d-3934-b2fa-ad0ba821062d",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "01049f45-8c94-54d1-f305-09752b92e16a",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "324e630c-4ae6-2447-b85a-45430535995b",
+  "name" : "ES",
+  "display_width" : null,
+  "label" : "Spanish (Spain)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^es$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "15657abb-55c7-4bd1-0294-85b2479ebd0b",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "1c8f9281-7c59-4067-ce22-dd6473a7bca7",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "386de90d-eba4-dbb2-a836-0d54e46754fe",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "7e29e922-d1fe-bd31-2d07-191862fccd8b",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "a8977672-4a1e-2c6d-45ea-3319078e971c",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "0023917a-f5f7-ea09-9c8f-3ef314bb25f8",
+  "name" : "ES_MX",
+  "display_width" : null,
+  "label" : "Spanish (Mexico)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^es_mx$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "b7787d30-4714-bff5-54bf-aa60354ab7da",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "bc9021a9-df39-c448-dfa6-1fa299a6bd6a",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "3ce1609b-dd3a-5d58-13d1-8b9f96fa548a",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "3060644c-05b9-315b-d99a-6ab674176ce0",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "b26cf911-4567-ce3c-3339-81b36ad6401c",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+}, {
+  "id" : "6f411a77-0852-e0cf-c3d7-46b3cba39c83",
+  "name" : "SW",
+  "display_width" : null,
+  "label" : "Swedish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "sv",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4c2d9b45-acd7-c6a3-802e-b6b8388574ce",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort erforderlich"
+  }, {
+    "id" : "d683635a-e485-898b-abe8-c18b8adb9e40",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen."
+  }, {
+    "id" : "f5809188-4185-44be-7826-75eadae26400",
+    "name" : "password_placeholder",
+    "display_width" : null,
+    "label" : "password_placeholder",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Passwort"
+  }, {
+    "id" : "34552a25-ddea-b772-f16a-1b268902e071",
+    "name" : "submit_button_text",
+    "display_width" : null,
+    "label" : "submit_button_text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Absenden"
+  }, {
+    "id" : "a6639dad-7324-851a-f83d-b38c0c37c407",
+    "name" : "bad_password_message",
+    "display_width" : null,
+    "label" : "Bad Password Message",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Passwort erforderlich",
+    "subheader_text" : "Bitte geben Sie das erforderliche Passwort ein, um diese Seite anzuzeigen.",
+    "password_placeholder" : "Passwort",
+    "submit_button_text" : "Absenden",
+    "bad_password_message" : "<p>Sorry, versuche es bitte nochmal!</p>"
+  }
+} ]

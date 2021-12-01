@@ -1,0 +1,69 @@
+{# Default menu item classes #}
+
+{% macro defaultItemClasses() %}
+ {{
+ {
+   "class": "no-submenu menu-item"
+ }|xmlattr
+ }}
+{% endmacro %}
+
+{% macro childClasses() %}
+ {{
+ {
+   "class": "has-submenu menu-item"
+ }|xmlattr
+ }}
+{% endmacro %}
+
+{# Menu item link attributes if the menu item is the current active page #}
+
+{% macro activeNode() %}
+ {{
+  {
+    'class': 'menu-link active-item',
+    'aria-current': 'page'
+  }|xmlattr
+ }}
+{% endmacro %}
+
+{# Menu item link classes if menu item is the parent of the current active page #}
+
+{% macro activeBranch() %}
+ {{
+  {
+    'class': 'menu-link active-branch'
+  }|xmlattr
+
+ }}
+{% endmacro %}
+
+
+{# Navigation menu item macro #}
+
+{% macro link(node) %}
+
+<li {{ childClasses() if node.children else defaultItemClasses() }}>
+  <!--   <a class="menu-link" href="{{ node.url }}"                                  {{ activeBranch() if node.activeBranch }} {{ activeNode() if node.activeNode }}>{{ node.label }}</a> -->
+  <a class="menu-link" href="{{ node.url if node.url else 'javascript:;' }}"  {{ activeBranch() if node.activeBranch }} {{ activeNode() if node.activeNode }}>{{ node.label }}</a>
+
+
+
+  {% if node.children %}
+  {{ renderNavigation(node) }}
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% macro renderNavigation(menuTree) %}
+  {% set level = level + 1 %}
+
+  <ul class="submenu level-{{ level }}" aria-hidden="{{ level != 1 }}"> 
+    {% for node in menuTree.children %}
+      {{ link(node) }}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+ 
+{{ renderNavigation(menu(module.primary_menu_field)) }}
+

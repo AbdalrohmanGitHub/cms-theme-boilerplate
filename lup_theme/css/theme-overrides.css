@@ -1,0 +1,945 @@
+/***********************************************/
+/*              CSS @imports                   */
+/***********************************************/
+{% import './tools/_macros.css' %}
+@import url("//hello.myfonts.net/count/3e5aa7");
+
+/***********************************************/
+/*             CSS @font-face                  */
+/***********************************************/
+@font-face {
+  font-family: "Geonik-Thin";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikThin/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikThin/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-HairlineOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikHairlineOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikHairlineOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Hairline";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikHairline/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikHairline/font.woff') format('woff');
+}
+@font-face {
+  font-family: "AlroRegular";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/AlroRegular/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/AlroRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "AlroBold";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/AlroBold/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/AlroBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Fuglesans-Bold";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/FuglesansBold/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/FuglesansBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-RegularDemo";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegularDemo/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegularDemo/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Fuglesans-Regular";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/FuglesansRegular/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/FuglesansRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-BlackOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBlackOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBlackOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Black";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBlack/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBlack/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-ExtraBold";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraBold/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-BoldOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBoldOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBoldOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Bold";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBold/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-DemiBoldOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikDemiBoldOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikDemiBoldOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-ExtraBoldOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraBoldOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraBoldOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-MediumOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikMediumOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikMediumOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-DemiBold";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikDemiBold/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikDemiBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Regular";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegular/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-RegularOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegularOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikRegularOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Medium";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikMedium/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-ExtraLightOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraLightOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraLightOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-LightOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikLightOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikLightOblique/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-ExtraLight";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraLight/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikExtraLight/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-Light";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikLight/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikLight/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Geonik-ThinOblique";
+  src: url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikThinOblique/font.woff2') format('woff2'), url('https://f.hubspotusercontent20.net/hubfs/20071927/webFonts/GeonikThinOblique/font.woff') format('woff');
+}
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+{## Table of contents
+
+  1. Variables
+    1a. Containers
+    1b. Colors
+    1c. Typography
+    1d. Buttons
+    1e. Forms
+    1f. Tables
+    1g. Site header
+    1h. Site footer
+  2. Containers / Grid / DnD Areas
+  3. Typography
+  4. Buttons
+  5. Forms
+  6. Tables
+  7. Site header
+  8. Site footer
+  9. Blog
+  10. System pages
+  11. Modules
+
+##}
+
+{###########################################################################}
+{############################   1. Variables   #############################}
+{###########################################################################}
+
+/* 1a. Containers */
+
+{% set container_width = theme.spacing.max_width ~ 'px' %}
+{% set dnd_section_padding = theme.spacing.vertical_spacing ~ 'px ' ~ '20px' %}
+
+
+/* 1b. Colors */
+
+{% set primary_color = theme.global_colors.primary_color.color  %}
+{% set secondary_color = theme.global_colors.secondary_color.color %}
+.
+/* 1c. Typography */
+
+{% set primary_font = theme.global_fonts.primary_font %}
+{% set secondary_font = theme.global_fonts.secondary_font %}
+
+
+{% set baseFontFamily                      = 'Geonik-ThinOblique, sans-serif' %}
+
+{% set baseFontFamily                      = '{{ theme.typography.global_fonts.base_font.font }}, sans-serif' %}
+/* You can use a different accent font-family for titles, CTAs, Menu, ... */
+
+{% set accentFontFamily                    = '{{ theme.typography.global_fonts.accent_font.font }}, sans-serif' %}
+{% set accentFontFamily                    = 'Geonik-Light, sans-serif' %}
+
+
+{% if theme.typography.body_font.body_text_select == "google" %}
+  {% set body_size = theme.typography.body_font.body_font.size.value %}
+  {% set body_color = theme.typography.body_font.body_font.color %}
+  {% set body_variation = theme.typography.body_font.body_font.variation %}
+  {#  {% set body_font = theme.typography.body_font.body_font.font %} #}
+  {% set body_font = theme.typography.body_font.body_text %}
+  {% set body_size_unit = body_font.size_unit %}
+{% else %}
+  {% set body_size = theme.typography.body_font.body_text_font_size %}
+  {% set body_color = theme.typography.body_font.body_text_font_color.color %}
+  {% set body_font = theme.typography.body_font.body_text_font %}
+{% endif %}
+
+
+{% if theme.typography.h1_font.h1_select == "google" %}
+  {% set h1_size = theme.typography.h1_font.heading_one.size.value %}
+  {% set h1_color = theme.typography.h1_font.heading_one.color %}
+  {% set h1_variation = theme.typography.h1_font.heading_one.variation %}
+  {% set h1_font = theme.typography.h1_font.heading_one.font %}
+{% else %}
+  {% set h1_color = theme.typography.h1_font.h1_font_color.color %}
+  {% set h1_size = theme.typography.h1_font.h1_font_size %}
+  {% set h1_font = theme.typography.h1_font.h1_font_family %}
+{% endif %}
+
+
+{% set heading_one = theme.typography.heading_one %}
+{% set heading_two = theme.typography.heading_two %}
+{% set heading_three = theme.typography.heading_three %}
+{% set heading_four = theme.typography.heading_four %}
+{% set heading_five = theme.typography.heading_five %}
+{% set heading_six = theme.typography.heading_six %}
+
+{% set anchor_font_color = theme.typography.link_color.color %}
+
+/* 1d. Buttons */
+
+{% set button_bg_color = color(theme.buttons.background_color) %}
+{% set button_font_color = theme.buttons.text_color.color %}
+{% set button_border = theme.buttons.border_width ~ 'px solid ' ~ theme.buttons.border_color.color %}
+{% set button_corner_radius = theme.buttons.border_radius ~ 'px' %}
+{% set button_spacing = theme.buttons.vertical_padding ~ 'px' ~ ' ' ~ theme.buttons.horizontal_padding ~ 'px' %}
+
+/* 1e. Forms */
+
+{% set form_title_bg_color = color(theme.forms.header_background_color) %}
+{% set form_title_font_color = theme.forms.header_text_color.color %}
+
+{% set form_label_font_color = theme.forms.label_color.color %}
+{% set form_help_text_font_color = theme.forms.help_text_color.color %}
+
+{% set form_input_border_color = theme.forms.field_border_color.color %}
+{% set form_input_focus_border_color = theme.forms.field_focus_border_color.color %}
+
+/* 1f. Tables */
+
+{% set table_head_bg_color = color(theme.tables.header_background_color) %}
+{% set table_head_font_color = theme.tables.header_text_color.color %}
+
+{% set table_bg_color = color(theme.tables.body_background_color) %}
+{% set table_font_color = theme.tables.body_text_color.color %}
+{% set table_border_color = theme.tables.border_color.color %}
+
+{% set table_footer_bg_color = color(theme.footer_group.footer_bg_color) %}
+{% set table_footer_font_color = theme.footer_group.footer_text_color.color %}
+
+/* 1g. Site header */
+
+{% set header_bg_color = color(theme.header.background_color) %}
+{% set header_nav_link_color = theme.header.menu_link_color.color %}
+{% set header_child_nav_border_color = theme.header.child_menu.child_menu_border_color.color %}
+
+/* 1h. Site footer */
+
+{% set footer_bg_color = color(theme.footer_group.background_color) %}
+{% set footer_font_color = theme.footer_group.text_color.color %}
+
+{###########################################################################}
+{##################   2. Containers / Grid / DnD Areas   ###################}
+{###########################################################################}
+
+.content-wrapper {
+  max-width: {{ container_width }};
+}
+
+.dnd-section,
+.content-wrapper--vertical-spacing {
+  padding: {{ dnd_section_padding }};
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ container_width }};
+}
+
+{###########################################################################}
+{###########################   3. Typography   #############################}
+{###########################################################################}
+
+html {
+  font-size: {{ body_font.size ~ body_size_unit }};
+}
+
+body {
+  {{ body_font.style }};
+  color: {{ body_font.color }};
+}
+
+/* Paragraphs */
+
+p {
+  {{ body_font.style }};
+}
+
+/* Anchors */
+
+a {
+  color: {{ anchor_font_color }};
+}
+
+a:hover,
+a:focus {
+  color: {{ color_variant(anchor_font_color, -40) }};
+}
+
+a:active {
+  color: {{ color_variant(anchor_font_color, 40) }};
+}
+
+/* Headings */
+
+h1 {
+  {{ heading_one.style }};
+  color: {{ heading_one.color }};
+  font-size: {{ heading_one.size ~ heading_one.size_unit }};
+}
+
+h2 {
+  {{ heading_two.style }};
+  color: {{ heading_two.color }};
+  font-size: {{ heading_two.size ~ heading_two.size_unit }};
+}
+
+h3 {
+  {{ heading_three.style }};
+  color: {{ heading_three.color }};
+  font-size: {{ heading_three.size ~ heading_three.size_unit }};
+}
+
+h4 {
+  {{ heading_four.style }};
+  color: {{ heading_four.color }};
+  font-size: {{ heading_four.size ~ heading_four.size_unit }};
+}
+
+h5 {
+  {{ heading_five.style }};
+  color: {{ heading_five.color }};
+  font-size: {{ heading_five.size ~ heading_five.size_unit }};
+}
+
+h6 {
+  {{ heading_six.style }};
+  color: {{ heading_six.color }};
+  font-size: {{ heading_six.size ~ heading_six.size_unit }};
+}
+
+/* Blockquote */
+
+blockquote {
+  border-left-color: {{ secondary_color }};
+}
+
+{###########################################################################}
+{############################   4. Buttons   ###############################}
+{###########################################################################}
+
+button,
+.button {
+  background-color: {{ button_bg_color }};
+  border: {{ button_border }};
+  border-radius: {{ button_corner_radius }};
+  color: {{ button_font_color }};
+  padding: {{ button_spacing }};
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  background-color: rgba({{ color_variant(theme.buttons.background_color.color, -40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
+  border-color: {{ color_variant(theme.buttons.border_color.color, -40) }};
+  color: {{ button_font_color }};
+}
+
+button:active,
+.button:active {
+  background-color: rgba({{ color_variant(theme.buttons.background_color.color, 40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
+  border-color: {{ color_variant(theme.buttons.border_color.color, 40) }};
+  color: {{ button_font_color }};
+}
+
+{###########################################################################}
+{##############################   5. Forms   ###############################}
+{###########################################################################}
+
+form,
+.submitted-message {
+  {{ body_font.style }};
+}
+
+/* Form title */
+
+.form-title {
+  background-color: {{ form_title_bg_color }};
+  color: {{ form_title_font_color }};
+}
+
+/* Form label */
+
+form label {
+  color: {{ form_label_font_color }};
+}
+
+/* Form help text */
+
+form legend {
+  color: {{ form_help_text_font_color }};
+}
+
+/* Form inputs */
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form input[type=number],
+form input[type=file],
+form select,
+form textarea {
+  border-color: {{ form_input_border_color }};
+  color: {{ body_font.color }};
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form input[type=tel]:focus,
+form input[type=number]:focus,
+form input[type=file]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: {{ form_input_focus_border_color }};
+}
+
+/* Form placeholder text */
+
+::-webkit-input-placeholder {
+  color: {{ body_font.color }};
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::placeholder,
+.hs-fieldtype-date .input .hs-dateinput:before {
+  color: {{ body_font.color }};
+}
+
+/* Date picker */
+
+.fn-date-picker td.is-selected .pika-button {
+  background: {{ primary_color }};
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ primary_color }};
+}
+
+/* Submit button */
+
+form input[type=submit],
+form .hs-button {
+  background-color: {{ button_bg_color }};
+  border: {{ button_border }};
+  border-radius: {{ button_corner_radius }};
+  color: {{ button_font_color }};
+  padding: {{ button_spacing }};
+}
+
+form input[type=submit]:hover,
+form input[type=submit]:focus,
+form .hs-button:hover,
+form .hs-button:focus {
+  background-color: rgba({{ color_variant(theme.buttons.background_color.color, -40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
+  border-color: {{ color_variant(theme.buttons.border_color.color, -40) }};
+  color: {{ button_font_color }};
+}
+
+form input[type=submit]:active,
+form .hs-button:active {
+  background-color: rgba({{ color_variant(theme.buttons.background_color.color, 40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
+  border-color: {{ color_variant(theme.buttons.border_color.color, 40) }};
+  color: {{ button_font_color }};
+}
+
+{###########################################################################}
+{#############################   6. Tables   ###############################}
+{###########################################################################}
+
+table {
+  background-color: {{ table_bg_color }};
+  border-color: {{ table_border_color }};
+}
+
+th,
+td {
+  border-color: {{ table_border_color }};
+  color: {{ table_font_color }};
+}
+
+thead th,
+thead td {
+  background-color: {{ table_head_bg_color }};
+  border-bottom-color: {{ table_border_color }};
+  color: {{ table_head_font_color }};
+}
+
+tfoot td {
+  background-color: {{ table_footer_bg_color }};
+  color: {{ table_footer_font_color }};
+}
+
+{###########################################################################}
+{###########################   7. Site header   ############################}
+{###########################################################################}
+/* 
+.header {
+  background-color: {{ header_bg_color }};
+}
+
+body .navigation-primary a,
+.header__logo .logo-company-name,
+.header__language-switcher-label-current,
+.header__language-switcher .lang_list_class li a {
+  color: {{ header_nav_link_color }};
+  font-family: {{ body_font.font }}, {{ body_font.fallback }};
+}
+
+body .navigation-primary a:hover,
+body .navigation-primary a:focus,
+.header__language-switcher-label-current:hover,
+.header__language-switcher-label-current:focus,
+.header__language-switcher .lang_list_class li:hover a,
+.header__language-switcher .lang_list_class li a:focus {
+  color: {{ color_variant(header_nav_link_color, -40) }};
+}
+
+body .navigation-primary a:active,
+.header__language-switcher-label-current:active,
+.header__language-switcher .lang_list_class li a:active {
+  color: {{ color_variant(header_nav_link_color, 40) }};
+}
+
+body .navigation-primary .submenu.level-1 > li > a.active-item:after {
+  background-color: {{ primary_color }};
+}
+
+body .submenu.level-2,
+.header__language-switcher .lang_list_class {
+  background-color: {{ header_bg_color }};
+  border-color: {{ header_child_nav_border_color }}; 
+}
+
+body .submenu.level-2 > li:first-child:before {
+  border-color: {{ header_child_nav_border_color }};
+}
+
+.header__language-switcher .lang_list_class:before {
+  border-bottom-color: {{ header_child_nav_border_color }};
+}
+
+body .submenu.level-2 .menu-item .menu-link:hover,
+body .submenu.level-2 .menu-item .menu-link:focus,
+.header__language-switcher .lang_list_class li:hover,
+body .submenu.level-2 > li:first-child:hover:before,
+body .submenu.level-2 > li:first-child.focus:before {
+  background-color: {{ header_bg_color }};
+}
+
+.header__language-switcher .lang_list_class.first-active::after {
+  border-bottom-color: {{ header_bg_color }};
+}
+
+.header__language-switcher-label-current,
+.header__language-switcher .lang_list_class li a {
+  font-family: {{ body_font.font }}, {{ body_font.fallback }};
+}
+
+.header__language-switcher-label-current:after {
+  border-top-color: {{ header_nav_link_color }};
+}
+
+@media(max-width: 767px) {
+  .header__navigation {
+    background-color: {{ header_bg_color }};
+  }
+
+  .header__navigation-toggle svg,
+  .menu-arrow svg {
+    fill: {{ header_nav_link_color }};
+  }
+} */
+{###########################################################################}
+{###############################   _header   ###############################}
+{###########################################################################}
+
+.main_head_innr {
+  background-color: rgba({{ theme.header.background_color.color|convert_rgb }}, {{ theme.header.background_color.opacity * 0.01 }});
+}
+
+.header__logo .logo-company-name,
+.header__language-switcher-label-current,
+.header__language-switcher .lang_list_class li a {
+  color: {{ theme.header.menu_link_color.color }};
+}
+
+.header__language-switcher-label-current:hover,
+.header__language-switcher-label-current:focus,
+.header__language-switcher .lang_list_class li:hover a,
+.header__language-switcher .lang_list_class li a:focus {
+  color: {{theme.header.menu_link_hover_color.color }};
+}
+
+body .header__language-switcher-label-current:active,
+body .header__language-switcher .lang_list_class li a:active {
+  color: {{ theme.header.active_menu_link_color.color }};
+} 
+
+
+body .header__language-switcher-label-current:active,
+body .header__language-switcher .lang_list_class li:active {
+  background-color: {{ theme.header.active_menu_link_background_color.color }};
+} 
+
+
+body .header__language-switcher .lang_list_class li:hover,
+body .custom-menu-primary .submenu.level-2 .triangle-container.level-2.hover .triangle {
+  background-color: {{ theme.header.child_menu_link_hover_background_color.color }};
+  color: {{ theme.header.child_menu_link_hover_color.color }};
+}
+
+
+.header__language-switcher-label-current,
+.header__language-switcher .lang_list_class li a {
+  font-family: {{ body_font }};
+}
+
+.header__language-switcher-label.custom-menu-primary-current:after {
+  border-top-color: rgba({{ theme.header.menu_link.menu_link_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_color.opacity * 0.01 }});
+}
+
+.custom-menu-primary { 
+  background: linear-gradient(135deg, {{ theme.header.menu_gr_color1.color }} {{theme.header.menu_gr_color1.opacity}}%, {{ theme.header.menu_gr_color2.color }} {{theme.header.menu_gr_color2.opacity}}%, {{ theme.header.menu_gr_color3.color }} {{theme.header.menu_gr_color3.opacity}}%);
+/*   background: linear-gradient(135deg, #382671 0,#908f8f 100%,#382671eb 78%); */
+}
+
+.header { 
+/*   background: linear-gradient(62deg, {{ theme.header.menu_gr_color1.color }} {{theme.header.menu_gr_color1.opacity}}%, {{ theme.header.menu_gr_color2.color }} {{theme.header.menu_gr_color2.opacity}}%, {{ theme.header.menu_gr_color3.color }} {{theme.header.menu_gr_color3.opacity}}%); */
+/*   background: linear-gradient(62deg,  
+    {{ theme.header.menu_gr_color3.color }} 3%,
+    {{ theme.header.menu_gr_color2.color }} 6%, 
+    {{ theme.header.menu_gr_color1.color }} 25%, 
+    {{ theme.header.menu_gr_color3.color }} 35%, 
+    {{ theme.header.menu_gr_color2.color }} 47%,
+    {{ theme.header.menu_gr_color1.color }} 115%); */
+  background: linear-gradient(62deg,  
+    {{ theme.header.header_bg.header_gr_color3.color }} {{theme.header.header_bg.header_gr_color3.opacity}}%,
+    {{ theme.header.header_bg.header_gr_color2.color }} {{theme.header.header_bg.header_gr_color2.opacity}}%, 
+    {{ theme.header.header_bg.header_gr_color1.color }} {{theme.header.header_bg.header_gr_color1.opacity}}%, 
+    {{ theme.header.header_bg.header_gr_color3.color }} 35%, 
+    {{ theme.header.header_bg.header_gr_color2.color }} 47%,
+    {{ theme.header.header_bg.header_gr_color1.color }} 115%);
+}
+
+/* .custom-menu-primary > div > ul > li > a{
+  color: rgba({{ theme.header.menu_link.menu_link_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_color.opacity * 0.01 }});
+} */
+ul.submenu li.menu-item > a {
+/*     color: rgba(255,255,255,1.0); */
+    color: rgba({{ theme.header.menu_link.menu_link_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_color.opacity * 0.01 }});
+}
+
+.custom-menu-primary > div > ul > li > a:hover{
+  color: rgba({{ theme.header.menu_link.menu_link_hover_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_hover_color.opacity * 0.01 }});
+  background-color: rgba({{ theme.header.menu_link.menu_link_hover_background_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_hover_background_color.opacity * 0.01 }});
+}
+
+
+.custom-menu-primary > div > ul > li.active-branch >a ,
+.custom-menu-primary > div > ul > li.active >a {
+  color: rgba({{ theme.header.menu_link.active_menu_link_color.color|convert_rgb }}, {{ theme.header.menu_link.active_menu_link_color.opacity * 0.01 }});
+  background-color: rgba({{ theme.header.menu_link.active_menu_link_background_color.color|convert_rgb }}, {{ theme.header.menu_link.active_menu_link_background_color.opacity * 0.01 }});
+}
+
+
+.custom-menu-primary > div > ul ul{
+  background-color: rgba({{ theme.header.child_menu.child_menu_background_color.color|convert_rgb }}, {{ theme.header.child_menu.child_menu_background_color.opacity * 0.01 }});
+}
+
+
+.custom-menu-primary > div > ul ul li a{
+  color: rgba({{ theme.header.child_menu.child_menu_link_color.color|convert_rgb }}, {{ theme.header.child_menu.child_menu_link_color.opacity * 0.01 }});
+}
+
+.custom-menu-primary > div > ul ul li a:hover{
+  color: rgba({{ theme.header.child_menu.child_menu_link_hover_color.color|convert_rgb }}, {{ theme.header.child_menu.child_menu_link_hover_color.opacity * 0.01 }});
+  background-color: rgba({{ theme.header.child_menu.child_menu_link_hover_background_color.color|convert_rgb }}, {{ theme.header.child_menu.child_menu_link_hover_background_color.opacity * 0.01 }});
+}
+
+/* .custom-menu-primary > div > ul ul li .child-trigger:hover, */
+.custom-menu-primary .child-trigger:hover{
+/*   color: rgba({{ theme.header.child_trigger_hover_color.color|convert_rgb }}, {{ theme.header.child_menu_link_hover_color.opacity * 0.1 }}); */
+  background-color: rgba({{ theme.header.child_menu.child_menu_link_hover_background_color.color|convert_rgb }}, {{ theme.header.child_menu.child_menu_link_hover_background_color.opacity * 0.01 }});
+}
+
+.custom-menu-primary > div > ul ul li.active-branch > a,
+.custom-menu-primary > div > ul ul li.active >a{
+  color: rgba({{ theme.header.child_menu.active_child_menu_link_color.color|convert_rgb }}, {{ theme.header.child_menu.active_child_menu_link_color.opacity * 0.01 }});
+  background-color:rgba({{ theme.header.child_menu.active_child_menu_link_background_color.color|convert_rgb }}, {{ theme.header.child_menu.active_child_menu_link_background_color.opacity * 0.01 }});
+}
+
+
+.headr_title h1{
+  color: rgba({{ theme.header.title_color.color|convert_rgb }}, {{ theme.header.title_color.opacity * 0.01 }});
+}
+
+.cstm-contct-btn a{
+  color: rgba({{ theme.header.header_contact.contact_btn_color.color|convert_rgb }}, {{ theme.header.header_contact.contact_btn_color.opacity * 0.01 }});
+  background: linear-gradient(135deg,{{ theme.header.header_contact.contact_gr_color1.color}} 0,{{ theme.header.header_contact.contact_gr_color2.color}} 100%);
+}
+
+
+.cstm-contct-btn a:hover{
+  color: rgba({{ theme.header.header_contact.contact_btn_color_hvr.color|convert_rgb }}, {{ theme.header.header_contact.contact_btn_color_hvr.opacity * 0.01 }});
+  background: linear-gradient(135deg,{{ theme.header.header_contact.contact_gr_color1_hvr.color}} 0,{{ theme.header.header_contact.contact_gr_color2_hvr.color}} 100%);
+}
+
+.top_links> ul>li>a{
+  color: rgba({{ theme.header.top_menu.link_color.color|convert_rgb }}, {{ theme.header.top_menu.link_color.opacity * 0.01 }});
+
+}
+
+.top_links> ul>li>a:hover{
+  color: rgba({{ theme.header.top_menu.link_hover_color.color|convert_rgb }}, {{ theme.header.top_menu.link_hover_color.opacity * 0.01 }});
+
+}
+
+.top_links ul ul{ 
+  background-image:linear-gradient(135deg, {{ theme.header.top_menu.submenu_bg_grd1.color }} 0,{{ theme.header.top_menu.submenu_bg_grd2.color }} 100%); 
+}
+
+.top_links ul ul li a{
+  color: rgba({{ theme.header.top_menu.submenu_link_color.color|convert_rgb }}, {{ theme.header.top_menu.submenu_link_color.opacity * 0.01 }});
+}
+
+.top_links ul ul li a:hover{ 
+  color: rgba({{ theme.header.top_menu.submenu_link_hover_color.color|convert_rgb }}, {{ theme.header.top_menu.submenu_link_hover_color.opacity * 0.01 }});
+}
+
+.top_links ul ul li:hover{
+  background-color: rgba({{ theme.header.top_menu.submenu_hover_bg_color.color|convert_rgb }}, {{ theme.header.top_menu.submenu_hover_bg_color.opacity * 0.01 }});
+}
+
+.head_lang{
+  background-color: rgba({{ theme.header.head_lang.bg_color.color|convert_rgb }}, {{ theme.header.head_lang.bg_color.opacity * 0.01 }});
+}
+
+a#languageSwitcherButton{
+  color: rgba({{ theme.header.head_lang.link_color.color|convert_rgb }}, {{ theme.header.head_lang.link_color.opacity * 0.01 }});
+}
+
+
+a#languageSwitcherButton:hover{
+  color: rgba({{ theme.header.head_lang.link_hover_color.color|convert_rgb }}, {{ theme.header.head_lang.link_hover_color.opacity * 0.01 }});
+}
+
+.language_dropdown{
+  background-color: rgba({{ theme.header.head_lang.lang_dropdown_bg.color|convert_rgb }}, {{ theme.header.head_lang.lang_dropdown_bg.opacity * 0.01 }});
+  border: 1px solid {{ theme.header.head_lang.lang_dropdown_bg.color }};
+}
+
+.lang_btn a{
+  color: rgba({{ theme.header.head_lang.lanaguage_btn_color.color|convert_rgb }}, {{ theme.header.head_lang.lanaguage_btn_color.opacity * 0.01 }});
+}
+
+.lang_btn a:first-of-type{
+  background-image:linear-gradient(135deg, {{ theme.header.head_lang.german_btn_bg_grad1.color }} 0,{{ theme.header.head_lang.german_btn_bg_grad2.color }} 100%); 
+}
+
+.lang_btn a.disabled{
+  background-color: rgba({{ theme.header.head_lang.english_lang_bg_color.color|convert_rgb }}, {{ theme.header.head_lang.english_lang_bg_color.opacity * 0.01 }});
+}
+
+@media(min-width:641px){
+  .mobile-trigger>div{
+    color: rgba({{ theme.header.menu_trgr.menu_trgr_btn_color.color|convert_rgb }}, {{ theme.header.menu_trgr.menu_trgr_btn_color.opacity * 0.01 }});
+/*     background: linear-gradient(135deg,{{ theme.header.menu_trgr.menu_trgr_gr_color1.color}} 0,{{ theme.header.menu_trgr.menu_trgr_gr_color2.color}} 100%); */
+  }
+
+  .mobile-trigger:hover>div{
+/*     color: rgba({{ theme.header.menu_trgr.menu_trgr_btn_color_hvr.color|convert_rgb }}, {{ theme.header.menu_trgr.menu_trgr_btn_color_hvr.opacity * 0.01 }}); */
+/*     background: linear-gradient(135deg,{{ theme.header.menu_trgr.menu_trgr_gr_color1_hvr.color}} 0,{{ theme.header.menu_trgr.menu_trgr_gr_color2_hvr.color}} 100%); */
+  }
+
+}
+
+
+@media(max-width:640px){
+  .mobile-trigger{
+    color:#fff;
+  }
+
+}
+
+
+
+
+
+
+
+
+@media(max-width: 767px) {
+  .header__navigation {
+    background-color: rgba({{ theme.header.background_color.color|convert_rgb }}, {{ theme.header.background_color.opacity * 0.01 }});
+  }
+
+  .header__navigation-toggle svg,
+  .menu-arrow svg {
+    fill: rgba({{ theme.header.menu_link.menu_link_color.color|convert_rgb }}, {{ theme.header.menu_link.menu_link_color.opacity * 0.01 }});
+  }
+}
+
+{###########################################################################}
+{###########################   8. Site footer   ############################}
+{###########################################################################}
+
+.footer {
+  background-color: {{ footer_group.footer_bg_color }};
+}
+
+/* Footer Content */
+
+.footer p,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6,
+.footer label,
+.footer span,
+.footer li,
+.footer img {
+  color: {{ footer_group.footer_font_color }};
+}
+
+
+.atmc-footer_menu a {
+  color: {{ anchor_font_color }};
+}
+{###########################################################################}
+{##############################   9. Blog   ################################}
+{###########################################################################}
+
+.blog-post,
+.blog-header__inner,
+.blog-related-posts {
+  padding: {{ theme.spacing.vertical_spacing }}px 0;
+}
+
+/* Blog listing */
+
+.blog-index__post-title-link {
+  color: {{ heading_two.color }};
+}
+
+.blog-index__post-tag,
+.blog-index__post-author-name {
+  color: {{ body_font.color }};
+}
+
+/* Blog pagination */
+
+.blog-pagination__link {
+  color: {{ body_font.color }};
+}
+
+.blog-pagination__link--active:after,
+.blog-pagination__prev-link:after,
+.blog-pagination__next-link:after {
+  background-color: {{ primary_color }};
+}
+
+.blog-pagination__next-link svg,
+.blog-pagination__prev-link svg {
+  fill: {{ body_font.color }};
+}
+
+/* Blog post */
+
+.blog-post__meta a {
+  color: {{ body_font.color }};
+}
+
+.blog-post__tag-link {
+  color: {{ body_font.color }};
+}
+
+.blog-post__tag-link:hover,
+.blog-post__tag-link:focus {
+  color: {{ color_variant(body_font.color, -40) }};
+}
+
+.blog-post__tag-link:active {
+  color: {{ color_variant(body_font.color, 40) }};
+}
+
+/* Blog related posts */
+
+.blog-related-posts__title a {
+  color: {{ heading_two.color }};
+}
+
+/* Blog comments */
+
+.blog-comments {
+  margin-bottom: {{ theme.spacing.vertical_spacing }}px;
+}
+
+#comments-listing .comment-reply-to {
+  color: {{ anchor_font_color }};
+}
+
+#comments-listing .comment-reply-to:hover,
+#comments-listing .comment-reply-to:focus {
+  color: {{ color_variant(anchor_font_color, -40) }};
+}
+
+#comments-listing .comment-reply-to:active {
+  color: {{ color_variant(anchor_font_color, 40) }};
+}
+
+{###########################################################################}
+{##########################   10. System pages   ###########################}
+{###########################################################################}
+
+
+
+{###########################################################################}
+{############################   11. Modules   ##############################}
+{###########################################################################}
+
+.card__price {
+  {{ heading_three.style }};
+  color: {{ heading_three.color }};
+  font-size: {{ heading_three.size ~ heading_three.size_unit }};
+}
+
+
+
+
+

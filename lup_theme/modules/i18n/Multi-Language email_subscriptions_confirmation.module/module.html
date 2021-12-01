@@ -1,0 +1,14 @@
+{% import "/lup_themes/AA_lup_Theme-01/countryCodes.html" as countryCodes %}
+{% set fieldsByLocale = module[countryCodes.locale] %} 
+
+{% email_subscriptions_confirmation 
+    "email_subscriptions_confirmation"
+    label="{{ fieldsByLocale.label }}",
+
+    header="{{ fieldsByLocale.header }}",
+    subheader_text="{{ fieldsByLocale.subheader_text }}",
+    
+    unsubscribe_all_success="{{ fieldsByLocale.unsubscribe_all_success }}", 
+    subscription_update_success="{{ fieldsByLocale.subscription_update_success }}",
+%}
+

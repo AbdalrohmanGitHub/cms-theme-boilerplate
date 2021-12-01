@@ -1,0 +1,16 @@
+{% import "/lup_themes/AA_lup_Theme-01/countryCodes.html" as countryCodes %}
+
+{% set fieldsByLocale = module[countryCodes.locale] %} 
+
+{% email_subscriptions
+    "email_subscriptions"
+    label="{{ fieldsByLocale.label }}",
+    header="{{ fieldsByLocale.header }}",
+    subheader_text="{{ fieldsByLocale.subheader_text }}",    
+    unsubscribe_single_text="{{ fieldsByLocale.unsubscribe_single_text }}",
+    unsubscribe_all_text="{{ fieldsByLocale.unsubscribe_all_text }}",
+    unsubscribe_all_unsubbed_text="{{ fieldsByLocale.unsubscribe_all_unsubbed_text }}",
+    unsubscribe_all_option="{{ fieldsByLocale.unsubscribe_all_option }}", 
+    button_text="{{ fieldsByLocale.button_text }}",
+    resubscribe_button_text="{{ fieldsByLocale.resubscribe_button_text }}",
+%}

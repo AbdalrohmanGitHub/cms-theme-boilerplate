@@ -1,0 +1,136 @@
+/* Theme base styles */
+
+
+{# =========================================== #}
+{# ================= Elements ================= #}
+{# =========================================== #}
+/* Base HMTL elements are styled in this section (<body<, <h1>, <a>, <p>, <button> etc.) */
+
+{% include './elements/_typography.css' %}
+{% include './elements/_buttons.css' %}
+{% include './elements/_forms.css' %}
+{% include './elements/_tables.css' %}
+
+
+{# ========================================== #}
+{# ================= Generic ================= #}
+{# ========================================== #}
+/*  This is where reset, normalize & box-sizing styles go. */
+
+{% include './generic/_reset.css' %}
+{% include './generic/_normalize.css' %}
+
+
+{# ========================================== #}
+{# ================= Global ================= #}
+{# ========================================== #}
+{% include './global/_mega_menu.css' %}
+{% include './global/_menus.css' %}
+
+
+{# ========================================== #}
+{# ================= Objects ================= #}
+{# ========================================== #}
+/*  Non-cosmetic design patterns including grid and layout classes) */
+
+{% include './objects/_layout.css' %}
+{% include './objects/_containers-dnd.css' %}
+
+
+{# ========================================== #}
+{# ================= Components ================ #}
+{# ========================================== #}
+/* Specific pieces of UI that are stylized. Typically used for global partial styling */
+
+{% include './components/_footer.css' %}
+{% include './components/_header.css' %}
+{% include './components/_default-modules.css' %}
+{% include './components/_components.css' %}
+
+
+
+{# ========================================== #}
+{# ================= Plugins ================ #}
+{# ========================================== #}
+{% include './plugins/slick.css' %}
+{% include './plugins/magnificpopup.css' %}
+{% include './plugins/hamburgers.css' %}
+{% include './plugins/animate.css' %}
+{% include './plugins/chart.css' %}
+
+{# ========================================== #}
+{# ================= templates ================ #}
+{# ========================================== #}
+/* Specific pieces of UI that are stylized. Typically used for global partial styling */
+
+{% include './templates/_landing.css' %}
+{% include './templates/blog.css' %}
+{% include './templates/system.css' %}
+
+/* Tools
+Any animations, or functions used throughout the project.
+Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
+*/
+
+
+* {
+  --base: {{ base }};
+  --primary: {{ primary }};
+  --secondary: {{ secondary }};
+  --danger: {{ danger }};
+  --warning: {{ warning }};
+  --success: {{ success }};
+  --gray: {{ gray }};
+  --lightgray: {{ lightgray }};
+  --light: {{ light }};
+  --dark: {{ dark }};
+  --border_radius: {{ border_radius }};
+
+  --primary100: {{ color_variant(primary, 200) }};
+  --primary200: {{ color_variant(primary, 150) }};
+  --primary300: {{ color_variant(primary, 100) }};
+  --primary400: {{ color_variant(primary, 50) }};
+  --primary500: {{ primary }};
+  --primary600: {{ color_variant(primary, -50) }};
+  --primary700: {{ color_variant(primary, -100) }};
+  --primary800: {{ color_variant(primary, -150) }};
+  --primary900: {{ color_variant(primary, -200) }};
+
+  --secondary100: {{ color_variant(secondary, 200) }};
+  --secondary200: {{ color_variant(secondary, 150) }};
+  --secondary300: {{ color_variant(secondary, 100) }};
+  --secondary400: {{ color_variant(secondary, 50) }};
+  --secondary500: {{ secondary }};
+  --secondary600: {{ color_variant(secondary, -50) }};
+  --secondary700: {{ color_variant(secondary, -100) }};
+  --secondary800: {{ color_variant(secondary, -150) }};
+  --secondary900: {{ color_variant(secondary, -200) }};
+
+  --gray100: {{ color_variant(gray, 200) }};
+  --gray200: {{ color_variant(gray, 150) }};
+  --gray300: {{ color_variant(gray, 100) }};
+  --gray400: {{ color_variant(gray, 50) }};
+  --gray500: {{ gray }};
+  --gray600: {{ color_variant(gray, -50) }};
+  --gray700: {{ color_variant(gray, -100) }};
+  --gray800: {{ color_variant(gray, -150) }};
+  --gray900: {{ color_variant(gray, -200) }};
+  
+  --dark100: {{ color_variant(dark, 80) }};
+  --dark200: {{ color_variant(dark, 60) }};
+  --dark300: {{ color_variant(dark, 40) }};
+  --dark400: {{ color_variant(dark, 20) }};
+  --dark500: {{ dark }};
+  --dark600: {{ color_variant(dark, -20) }};
+  --dark700: {{ color_variant(dark, -40) }};
+  --dark800: {{ color_variant(dark, -60) }};
+  --dark900: {{ color_variant(dark, -80) }};
+	
+	
+	--h1_color: {{ h1_color }};
+	--h2_color: {{ h2_color }};
+	--h3_color: {{ h3_color }};
+	--h4_color: {{ h4_color }};
+	--h5_color: {{ h5_color }};
+	--h6_color: {{ h6_color }};
+}
