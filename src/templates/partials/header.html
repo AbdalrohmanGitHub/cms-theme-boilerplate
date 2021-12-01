@@ -3,41 +3,32 @@
   label: Website header
 -->
 <header class="header">
-
+<script src="/hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>
   {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
-
   <a href="#main-content" class="header__skip">Skip to content</a>
 
   {# Top header drag and drop area #}
-
-  {% dnd_area 'header-top'
-    label='Top header',
-    class='content-wrapper'
-  %}
+  {% dnd_area 'header-top' label='Top header' class='content-wrapper' %}
   {% end_dnd_area %}
-
-  {# Main header #}
+  {# End top header drag and drop area #}
 
   <div class="header__container content-wrapper">
 
     {# Header logo column #}
-
     <div class="header__logo header__logo--main">
       {% module 'site_logo' path='@hubspot/logo' %}
     </div>
+    {# End header logo column #}
 
     {# Header navigation column #}
-
     <div class="header__column">
 
       {# Header navigation row one #}
-
-      <div class="header__row-1">
+<!--       <div class="header__row-1">
         {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
           <div class="header__language-switcher header--element">
             <div class="header__language-switcher--label">
-              {% module 'language-switcher'
-                path='@hubspot/language_switcher',
+              {% module 'language-switcher' path='@hubspot/language_switcher',
                 label='Language switcher',
                 display_mode='localized'
               %}
@@ -46,42 +37,101 @@
           </div>
         {% endif %}
         <div class="header__search header--element">
-          {% module 'site_search'
-            path='@hubspot/search_input',
+          {% module 'site_search' path='@hubspot/search_input',
             label='Search',
             field_label='Search',
             placeholder=''
           %}
         </div>
-      </div>
+      </div> -->
+      {# End header navigation row one #}
 
+      
+      
       {# Header navigation row two #}
-
       <div class="header__row-2">
-        <div class="header--toggle header__navigation--toggle"></div>
+<!--         <div class="header--toggle header__navigation--toggle"></div> -->
         {% if content.translated_content|length || is_listing_view && group.translations %}
           <div class="header--toggle header__language-switcher--toggle"></div>
         {% endif %}
-        <div class="header--toggle header__search--toggle"></div>
+<!--         <div class="header--toggle header__search--toggle"></div> -->
         <div class="header__close--toggle"></div>
-        <div class="header__navigation header--element">
-          {% module 'navigation-primary'
-            path='../../modules/menu',
-            label='Primary navigation'
-          %}
+        <div class="mobile-trigger">
+          <style>
+            .container {
+              display: inline-block;
+              cursor: pointer;
+            }
+
+            .bar1, .bar2, .bar3 {
+              width: 35px;
+              height: 5px;
+              background-color: #333;
+              margin: 6px 0;
+              transition: 0.4s;
+            }
+
+            .change .bar1 {
+              -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+              transform: rotate(-45deg) translate(-9px, 6px);
+            }
+
+            .change .bar2 {opacity: 0;}
+
+            .change .bar3 {
+              -webkit-transform: rotate(45deg) translate(-8px, -8px);
+              transform: rotate(45deg) translate(-8px, -8px);
+            }
+          </style>
+          
+          <div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <script>
+                function myFunction(x) {
+//                   x.classList.toggle("change");
+                }
+              </script>
+<!--             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" id="ico-menu">
+              <path fill-rule="evenodd" d="M24 17.8c0-.547-.453-1-1-1H1c-.547 0-1 .453-1 1v2c0 .547.453 1 1 1h22c.547 0 1-.453 1-1v-2zm0-8c0-.547-.453-1-1-1H1c-.547 0-1 .453-1 1v2c0 .547.453 1 1 1h22c.547 0 1-.453 1-1v-2zm0-8c0-.547-.453-1-1-1H1c-.547 0-1 .453-1 1v2c0 .547.453 1 1 1h22c.547 0 1-.453 1-1v-2z"></path>
+            </svg> 
+            <span class="show-for-medium">Menu</span> -->
+          </div>
         </div>
+      
+        <div class="header__navigation header--element">
+          <div class="custom-menu-primary">
+            {% module "navigation-primary" path='../../modules/menu-section', 
+              label="Primary Menu" 
+            %}
+          </div>
+        </div> 
       </div>
+      <div class="head-menu-btns"> 
+          <div class="back-icon">
+            <a class="menu-center-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 24" id="ico-angle-left"><path fill-rule="evenodd" d="M13.996 1.996a.76.76 0 0 1-.24.553L4.305 12l9.45 9.45c.16.161.241.346.241.554a.76.76 0 0 1-.24.553l-1.203 1.203A.76.76 0 0 1 12 24a.76.76 0 0 1-.553-.24L.24 12.553A.76.76 0 0 1 0 12a.76.76 0 0 1 .24-.553L11.447.24A.76.76 0 0 1 12 0a.76.76 0 0 1 .553.24l1.203 1.203c.16.16.24.345.24.553z"></path></svg>
+            </a>
+          </div>
+        <div class="close-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ico-x-simple"><path fill-rule="evenodd" d="M14.354 12l9.406 9.441c.16.161.24.346.24.555 0 .21-.08.395-.24.556l-1.203 1.207a.759.759 0 0 1-.553.241.759.759 0 0 1-.553-.241L12 14.272 2.55 23.76a.759.759 0 0 1-.554.241.759.759 0 0 1-.553-.241L.24 22.552a.765.765 0 0 1-.24-.556c0-.209.08-.394.24-.555L9.646 12 .24 2.559A.765.765 0 0 1 0 2.004c0-.21.08-.395.24-.556L1.443.241A.759.759 0 0 1 1.996 0c.208 0 .393.08.553.241L12 9.728 21.45.24A.759.759 0 0 1 22.005 0c.208 0 .393.08.553.241l1.203 1.207c.16.161.24.346.24.556 0 .209-.08.394-.24.555L14.354 12z"></path></svg>
+      </div>
+        </div>
+      
+      {# End header navigation row two #}
 
+      
     </div>
+    {# End header navigation column #}
 
+    
   </div>
 
   {# Bottom header drag and drop area #}
-
-  {% dnd_area 'header-bottom'
-    label='Bottom header',
-    class='content-wrapper'
-  %}
+  {% dnd_area 'header-bottom' label='Bottom header' class='content-wrapper' %}
   {% end_dnd_area %}
+  {# End bottom header drag and drop area #}
 
 </header>
+<div class="overlay"></div>

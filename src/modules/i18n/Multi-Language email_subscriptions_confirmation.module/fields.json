@@ -1,0 +1,1255 @@
+[ {
+  "id" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+  "name" : "language",
+  "display_width" : null,
+  "label" : "Select language to edit",
+  "required" : true,
+  "locked" : false,
+  "display" : "select",
+  "placeholder" : "Search",
+  "choices" : [ [ "zh", "Chinese (China)" ], [ "zh_hk", "Chinese (Hong Kong)" ], [ "cs", "Czech" ], [ "da", "Danish" ], [ "nl", "Dutch" ], [ "en", "English" ], [ "fi", "Finnish" ], [ "fr", "French" ], [ "de", "German" ], [ "el", "Greek" ], [ "it", "Italian" ], [ "jp", "Japanese" ], [ "no", "Norwegian" ], [ "pl", "Polish" ], [ "pt", "Portuguese" ], [ "es_mx", "Spanish (Mexico)" ], [ "es", "Spanish (Spain)" ], [ "sv", "Swedish" ] ],
+  "type" : "choice",
+  "default" : "en"
+}, {
+  "id" : "782e8722-964b-e167-5852-601137211ab2",
+  "name" : "EN",
+  "display_width" : null,
+  "label" : "English",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "en",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "20400e5d-02ad-2c6e-ece8-94a73cc82fb9",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Communication Preferences"
+  }, {
+    "id" : "280f08c7-fd0a-4983-dce8-5ae43241cda6",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you.</p>"
+  }, {
+    "id" : "2af3984f-d5e9-d7eb-08d3-c04d65677354",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "9f34cd26-b49a-3bc0-71eb-745848bcec82",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Communication Preferences",
+    "subheader_text" : "<p>If this is not your email address, please ignore this page since the email associated with this page was most likely forwarded to you.</p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully unsubscribed from all email communications."
+  }
+}, {
+  "id" : "8adf4bab-948f-b44a-9ae5-67c41db9b842",
+  "name" : "DE",
+  "display_width" : null,
+  "label" : "German",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "de",
+    "operator" : "MATCHES_REGEX",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0b155751-c78f-eab3-e73f-1a6f66d0b28b",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "6f89c5ea-3128-57a6-7eea-07aeb68d61eb",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "cc0f31d9-4372-35cf-1845-7627b3783060",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "b8f37974-289a-0ff1-b827-14c4264412be",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "ac6dcf0f-8036-e41c-7045-5c6789fa3e14",
+  "name" : "ZH",
+  "display_width" : null,
+  "label" : "Chinese (China)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^zh$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "4c405ee6-c773-7d29-e736-a329c62d29d2",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "614a94bc-506d-20fe-602d-08e227be7a8b",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "c2077cd8-77b1-fd7b-b36e-5c8638d17d69",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "4a956a07-e911-26e0-ae75-fa5857420b86",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "1262b1c5-715a-58ae-c0d3-8ba062d80038",
+  "name" : "ZH_HK",
+  "display_width" : null,
+  "label" : "Chinese (Hong Kong)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^zh_hk$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "495b7cc7-00b2-be14-99c5-bf2cf5e10fce",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "41492257-b347-c7d5-6d3a-424188648a0f",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "b7ae3b45-9f18-8f44-e369-46cd518bda07",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "71210b87-0d2d-42ad-1e99-4e3747e6d9ab",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "ef848e6f-4522-674b-33c4-eb3a8482aa0e",
+  "name" : "CS",
+  "display_width" : null,
+  "label" : "Czech",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "cs",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "1d9e35ea-c393-80c3-e02a-4771e6d7a4af",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "668206c7-403e-758f-aea6-2a9482e07b76",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "bf0b2135-f90e-1b8c-16f0-f6e9d92e8f56",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "4e200dd2-43e3-af9f-ea8c-22c1e3322da1",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "12d0f26e-ea7e-8ae8-8853-f2fbcf8ad93d",
+  "name" : "DA",
+  "display_width" : null,
+  "label" : "Danish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "da",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "dbcc60c3-a778-7883-4779-d9dcc33e39c9",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "2a827e35-7128-1b58-e8a4-04d7f557905a",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "64e11bd5-f25a-c672-c289-279f26aeccce",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "33208bf0-b5cf-9f5f-86b2-cbae55fd5a66",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "fab3019d-02ce-0df4-a03e-9c0a7b272a0e",
+  "name" : "NL",
+  "display_width" : null,
+  "label" : "Dutch",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "nl",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "c46eece0-f7c8-2291-1840-d037aa4ceca8",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "ed26d382-2893-e18f-3b46-b0d8ee6dce8c",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "bc93f733-4acd-350d-2910-8fde60baf6a8",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "36ad690c-aefb-3643-3d15-b9b575cb67c3",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "0bb7ec59-cd0d-3cb4-a7c8-fecd1f4f8d28",
+  "name" : "FI",
+  "display_width" : null,
+  "label" : "Finnish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "fi",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "ca7dc883-bda3-4daf-bd4a-85fc67ecb02b",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "3a057f91-6566-4509-dc5f-3e45e0f678f1",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "90b1e412-4a61-296f-59e6-a1cf835d0585",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "29404923-a162-764b-1e02-74f1fe95168c",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "72dbdbed-a7f6-a7ad-4072-78b74f0d7a6e",
+  "name" : "FR",
+  "display_width" : null,
+  "label" : "French",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "fr",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "d0bcf3d3-544c-9862-ebd8-f2c9a537645c",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "2efc47f7-3219-11df-30c5-c1b20f1cf85c",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "1d938145-0ee5-6ca6-0804-ae57990ec078",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "0192de4c-8c49-e91a-b00b-08fc235fceed",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "058c1cb3-12fb-655a-8cc8-955ff46b2fe0",
+  "name" : "EL",
+  "display_width" : null,
+  "label" : "Greek",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "el",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "f4b37c46-1bf6-5cea-e6fa-9ac05e602b75",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "1e5d6f7a-fd43-3d98-fcc9-cd69cf32203b",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "da09ce6d-221b-c56c-368b-854401d766b8",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "62511074-5a7e-26b6-01fa-74f2c04f3b31",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "29719178-6df0-c6e4-d6b9-149bd6cf6e54",
+  "name" : "IT",
+  "display_width" : null,
+  "label" : "Italian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "it",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "c46ed135-d180-55d6-ec8b-3e9bacfd23f3",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "ee3491be-84fa-5bc5-e6ee-03f145b608f0",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "34e6e388-30b1-7ffb-0a32-e31fa13ac527",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "505b0dde-5050-a59f-910e-2f868502c497",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "53ee4965-b9f5-c6e7-f0b5-19e47a15dda1",
+  "name" : "JP",
+  "display_width" : null,
+  "label" : "Japanese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "jp",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "d69b7bd8-2468-97af-f744-e003ca52e8cb",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "45a188ba-23df-0b24-2808-05b1ba8dad37",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "4cef9b8c-d045-7f83-a846-636bea82e190",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "a16c1c5d-690d-2d47-1a61-b94f5ca4c6cc",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "2ffe5daf-5a88-75c8-8deb-3f4b02891376",
+  "name" : "NO",
+  "display_width" : null,
+  "label" : "Nowegian",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "no",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "1e534d8d-b05d-0671-e844-d88db041aaa0",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "cbd86d0f-ab43-5ae5-12e6-dc8ee1af4246",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "05d9f4f7-1c50-3bd9-2ab6-57dc82a1821a",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "9b4f6c0e-4ff6-dbf5-3b10-a5002289183a",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "1b25c767-c642-5189-8d7e-221d332ce8ea",
+  "name" : "PL",
+  "display_width" : null,
+  "label" : "Polish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "pl",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "0cb63716-8ff6-f123-3ad8-aee3652a9616",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "fd063ffe-ee07-996a-eb43-c80d7fcf5d38",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "5079a76f-625c-2353-65fb-3d44414d2ce0",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "682e6618-6d13-4a9d-f41c-87358ebb4960",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "b25ffa35-ab60-fd35-85c2-93105a77066b",
+  "name" : "PT",
+  "display_width" : null,
+  "label" : "Portuguese",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "pt",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "de46006c-7923-2733-c0fa-1b1f605151d3",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "303b783d-1329-21a9-878f-85cbab3fbcfd",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "4f860137-ccbe-9b4e-7aa2-fbf21e78b960",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "fb2dee6b-60f7-d854-0f55-aa7b9d331ff5",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "324e630c-4ae6-2447-b85a-45430535995b",
+  "name" : "ES",
+  "display_width" : null,
+  "label" : "Spanish (Spain)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^es$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "9988755b-1b31-0d28-6b54-642e68962393",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "7c87b5a7-b1dd-4818-47ee-7d51cb8a209c",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "2f049736-5d50-cba3-2013-b75dc5ebc9fe",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "ba386930-90b2-7b92-417c-0bfb2d11349c",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "0023917a-f5f7-ea09-9c8f-3ef314bb25f8",
+  "name" : "ES_MX",
+  "display_width" : null,
+  "label" : "Spanish (Mexico)",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "^es_mx$",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "aea26975-4005-1761-dfb7-4c246bb9dde3",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "673a4c84-210e-ec23-e4e1-5d0b7f987b37",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "b3cf0613-8b51-87d8-6d83-f712a98e6ba2",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "6be4dca1-fc9b-a368-fe08-f412eefbdbce",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+}, {
+  "id" : "6f411a77-0852-e0cf-c3d7-46b3cba39c83",
+  "name" : "SW",
+  "display_width" : null,
+  "label" : "Swedish",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8ef41374-d293-fb1e-3d2e-c48eff8ced1c",
+    "controlling_value_regex" : "sv",
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "808463f0-3024-d6ca-e5ec-8fb0a9c25454",
+    "name" : "header",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kommunikationseinstellungen"
+  }, {
+    "id" : "3da8c3db-91e8-34b3-501c-27041684afde",
+    "name" : "subheader_text",
+    "display_width" : null,
+    "label" : "Subheader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>"
+  }, {
+    "id" : "745b9900-483a-24de-4af0-ec0c2dff2cb8",
+    "name" : "unsubscribe_all_success",
+    "display_width" : null,
+    "label" : "Message on unsubscribe",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully unsubscribed from all email communications."
+  }, {
+    "id" : "13f00ea5-8a47-ce9e-295e-124271716ea7",
+    "name" : "subscription_update_success",
+    "display_width" : null,
+    "label" : "Message on subscription update",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "You have successfully updated your email preferences."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "header" : "Kommunikationseinstellungen",
+    "subheader_text" : "<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:8395649,&quot;3&quot;:[null,0],&quot;10&quot;:2,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:[null,2,0],&quot;15&quot;:&quot;Arial&quot;,&quot;26&quot;:400}\">Wenn dies nicht Ihre E-Mail-Adresse ist, ignorieren Sie diese Seite, da die mit dieser Seite verknüpfte E-Mail wahrscheinlich an Sie weitergeleitet wurde.</span></p>",
+    "unsubscribe_all_success" : "You have successfully unsubscribed from all email communications.",
+    "subscription_update_success" : "You have successfully updated your email preferences."
+  }
+} ]

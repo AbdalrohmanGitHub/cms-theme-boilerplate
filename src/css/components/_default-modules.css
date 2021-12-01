@@ -16,7 +16,7 @@
 
 @media (max-width: 767px) {
   .hs-menu-wrapper.hs-menu-flow-horizontal ul {
-    flex-direction: column;
+/*     flex-direction: column; */
   }
 }
 

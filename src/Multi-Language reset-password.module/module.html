@@ -1,0 +1,33 @@
+{% import "/lup_themes/AA_lup_Theme-01/countryCodes.html" as countryCodes %}
+
+{% set fieldsByLocale = module[countryCodes.locale] %} 
+
+
+<div id="hs_cos_wrapper_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+   <span id="hs_cos_wrapper_content_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+      <h4> {{ fieldsByLocale.header }}</h4>
+      {{ fieldsByLocale.subheader_text  }}
+   </span>
+</div>
+<div class="form-container">
+   {% password_reset 'my_password_reset'
+      submit_button_text= '{{ fieldsByLocale.submit_button_text}}'
+      password_confirm_label='Confirm Password',
+      password_label='Password',        
+   %}
+
+</div>
+<div>
+   <div id="hs_cos_wrapper_membership_admin_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+      <span id="hs_cos_wrapper_membership_admin_content_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+         <p>{{ fieldsByLocale.having_trouble}} <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">{{ fieldsByLocale.mailto}}</a>.</p>
+      </span>
+   </div>
+</div>
+
+
+
+
+
+
+

@@ -1,43 +1,64 @@
 <!--
   templateType: global_partial
+  isAvailableForNewContent: false
   label: Footer
 -->
-<footer class="footer">
-  {% dnd_area 'footer'
-    label='Footer',
-    class='footer__container content-wrapper'
-  %}
 
-    {# Social follow and copyright #}
+{% if theme.footer_group.footer_option == 'custom' %}
 
-    {% dnd_section %}
-      {% dnd_column %}
-        {% dnd_row %}
-          {% dnd_module path='../../modules/social-follow' %}
-            {% module_attribute 'social_link' is_json=True %}
-              [
-                {"social_account": "facebook-f"},
-                {"social_account": "linkedin-in"},
-                {"social_account": "twitter"},
-                {"social_account": "instagram"}
-              ]
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row
-          margin={
-            'top': 12,
-            'bottom': 12
-          }
-        %}
-          {% dnd_module
-            path='@hubspot/rich_text',
-            html='<div style="text-align: center; font-size: 0.7rem;"><span>© {{ year }} All rights reserved.</span></div>'
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
-
-  {% end_dnd_area %}
-</footer>
+  {% module "custom_footer_path" path="@hubspot/text", label="Custom Footer Path", value="", export_to_template_context=True %}
+  {% if widget_data.custom_footer_path.value %}
+    {% include widget_data.custom_footer_path.value %}
+  {% endif %}
+ 
+{% else %}
+   <footer class="footer atmc-parallax {% if module.settings.footer_background_option == 'image' %}{% if module.settings.enable_background_overlay %}footer-overlay{% endif %}{% endif %} {% if module.settings.footer_text_white %}text-white{% endif %}" 
+				style="
+					{% if module.settings.footer_background_option == 'color' %}
+            {% if module.settings.footer_background_color %}background-color:{{ module.settings.site_footer_background_color.color }};{% endif %}
+					{% else %}
+				    {% if module.settings.footer_background_image.src %}background-image:url('{{ module.settings.footer_background_image.src }}');{% endif %}
+					{% endif %}
+	      ">     
+	    {% if widget_data.footer.value != 'Landing' %}
+         {% dnd_area 'footer' class='footer__container content-wrapper', label='Footer' style="padding: 0px;"%}
+          {# Social follow and copyright section #}
+          {% dnd_section %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path='../../modules/social-follow',
+                  label='Social follow'
+                %}
+                  {% module_attribute 'social_link' is_json=True %}
+                    [
+                      {"social_account": "facebook-f"},
+                      {"social_account": "linkedin-in"},
+                      {"social_account": "twitter"},
+                      {"social_account": "instagram"}
+                    ]
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row
+                margin={
+                'top': 12,
+                'bottom': 12
+                }
+              %}
+                {% dnd_module path='@hubspot/rich_text' %}
+                  {% module_attribute 'html' %}
+                    <div style="text-align: center; font-size: 0.7rem;">
+                      <span>© {{ year }} All rights reserved.</span>
+                    </div>
+                  {% end_module_attribute %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+          {% end_dnd_section %}
+          {# End social follow and copyright section #}
+        {% end_dnd_area %}
+     
+	    {% endif %}
+		    {% module "footer-module" path='../../global/Atomic - Footer', label="Atomic - Footer Module", no_wrapper=True %}
+   </footer>
+{% endif %}

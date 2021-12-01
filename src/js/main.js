@@ -1,6 +1,6 @@
 (function () {
   // Polyfill for NodeList.prototype.forEach() in IE
-  if (window.NodeList && !NodeList.prototype.forEach) {
+   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
       thisArg = thisArg || window;
       for (var i = 0; i < this.length; i++) {
@@ -83,7 +83,7 @@
   function toggleDisabled() {
     var emailSubItem = document.querySelectorAll('#email-prefs-form .item');
 
-    emailSubItem.forEach(function (item) {
+    emailSubItem.forEach(function(item){
       var emailSubItemInput = item.querySelector('input');
 
       if (emailGlobalUnsub.checked) {
@@ -102,6 +102,7 @@
     if (!document.body) {
       return;
     } else {
+
       // Function dependent on language switcher
       if (langSwitcher) {
         langToggle.addEventListener('click', toggleLang);
@@ -126,6 +127,75 @@
       if (emailGlobalUnsub) {
         emailGlobalUnsub.addEventListener('change', toggleDisabled);
       }
+
     }
   });
+  
+  
+
+  
+  
+  
+  
+    var callback, firstLanguageSwitcherItem = document.querySelector(".header__language-switcher .lang_list_class li:first-child"), languageSwitcherList = document.querySelector(".header__language-switcher .lang_list_class"), LangSwitcher = (document.querySelector(".header__navigation"),
+    document.querySelector(".header__language-switcher")); allToggles = (document.querySelector(".header__search"),
+    document.querySelectorAll(".header--toggle")); langToggle = (document.querySelector(".header__navigation--toggle"),
+    document.querySelector(".header__language-switcher--toggle")); closeToggle = (document.querySelector(".header__search--toggle"),
+    document.querySelector(".header__close--toggle"));
+    document.querySelectorAll(".header--element, .header--toggle");
+    function showFocusOutline() {
+        document.body.classList.add("enable-focus-styles"),
+        document.body.classList.remove("disable-focus-styles")
+    }
+    function hideFocusOutline() {
+        document.body.classList.add("disable-focus-styles"),
+        document.body.classList.remove("enable-focus-styles")
+    }
+    function hoverLanguageSwitcher() {
+        languageSwitcherList.classList.add("first-active")
+    }
+    function unhoverLanguageSwitcher() {
+        languageSwitcherList.classList.remove("first-active")
+    }
+    function toggleLang() {
+        allToggles.forEach((function(toggle) {
+            toggle.classList.toggle("hide")
+        }
+        ));
+        LangSwitcher.classList.toggle("open"),
+        langToggle.classList.toggle("open"),
+        closeToggle.classList.toggle("show")
+    }
+    $(".active-branch").each((function() {
+        $(this).parent("li").addClass("active-branch")
+    }
+    ));
+    callback = function() {
+        document.body && (document.body.addEventListener("keydown", showFocusOutline),
+        document.body.addEventListener("mousemove", hideFocusOutline),
+        document.body.addEventListener("mousedown", hideFocusOutline),
+        document.body.addEventListener("mouseup", hideFocusOutline),
+        LangSwitcher && (firstLanguageSwitcherItem.addEventListener("mouseover", hoverLanguageSwitcher),
+        firstLanguageSwitcherItem.addEventListener("mouseout", unhoverLanguageSwitcher),
+        langToggle.addEventListener("click", toggleLang)))
+    }
+    ,
+    ["interactive", "complete"].indexOf(document.readyState) >= 0 ? callback() : document.addEventListener("DOMContentLoaded", callback)
 })();
+
+
+
+  $('.mobile-trigger').click(function(){
+    $('body').toggleClass('mobile-open'); 
+  });
+  
+  
+
+
+    $('.overlay').click(function(){
+      $('body').removeClass('mobile-open'); 
+    });
+
+    $('.close-menu').click(function(){
+      $('body').removeClass('mobile-open'); 
+    });

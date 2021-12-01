@@ -1,0 +1,615 @@
+{% if hub_id == '2333817' %}
+  {% set basePath = '/GiantFocal/Atomic' %}
+{% else %}
+  {% set basePath = '/@marketplace/GiantFocal/Atomic' %}
+{% endif %}
+ 
+{# Mega Menu #}
+{% macro atomic_mega_menu()  %}
+{# ----- Mega Menu ----- #}
+			{% if widget_data.header.value != 'Landing' %}
+				{% if module.mega_menu %}
+			    
+			    {% if module.mega_menu_option == 'simple' %}
+						{# ====================== SIMPLE Mega Menu ====================== #}
+						<div class="atmc-mega-menu">
+							{% for item in module.repeater %}
+							<div class="atmc-mega-menu_box atmc-mega-menu_box-simple text-white atmc-mega-menu_box-{{ total }}col atmc-bg-gray700" data-target="{{ item.target - 1 }}">
+								{% for item2 in item.menu %}
+								<div class="atmc-mega-menu_links atmc-mega-menu_col  w-1/{% if item.enable_image %}{{ loop.length + 1 }}{% else %}{{ loop.length }}{% endif %} atmc-mega-menu_col-border">
+									{% simple_menu menu_tree="{{ item2 }}" %}
+								</div>
+								{% endfor %}
+								
+								{% if item.enable_image %}
+								<a href="{{ item.url.href }}" class="atmc-mega-menu_image atmc-mega-menu_col  w-1/{{ item.menu|length + 1 }}" style="background-image:url('{{ item.image.src }}');">
+									<p class="atmc-btn atmc-btn-outline-white">{{ item.text_over_image }}</p>
+								</a>
+								{% endif %}
+							</div>
+							{% endfor %}
+						</div>
+						{# ====================== /SIMPLE Mega Menu ====================== #}
+			    {% elif module.mega_menu_option == 'builder' %}
+			      {# ====================== BUILDER Mega Menu ====================== #}
+			      <div class="atmc-mega-menu">
+							{% for item in module.builder %}
+							<div class="atmc-mega-menu_box atmc-mega-menu_box-{{ item.target }} flex items-stretch atmc-mega-menu_box-{{ total }}col atmc-bg-gray700" data-target="{{ item.target - 1 }}" style="background-color:{{ item.main_background_color.color }};">
+								{# --- Column Repeater --- #} 
+								{% for item2 in item.column_repeater %}
+									{% if item2.text_white %}
+										{% set textColor = 'text-white' %}
+								  {% else %}
+										{% set textColor = 'text-base' %}
+									{% endif %} 
+								  <div class="atmc-mega-menu_col atmc-mega-menu_col-{{ loop.index }} {% if item2.column_background_option == 'image' %}{% if item2.column_overlay %}atmc-mega-menu_col-overlay{% endif %}{% endif %} {% if item2.column_border %}atmc-mega-menu_col-border{% endif %} w-{{ item2.column_width }}/12 {% if item2.text_white %}text-white{% endif %}"
+											 {% if item2.column_background_option == 'solid' %}
+											 style="background-color:{{ item2.column_background_color.color }};"
+											 {% elif item2.column_background_option == 'image' %}
+											 style="background-image:url('{{ item2.column_background_image.src }}');"
+											 {% endif %}>  
+										  <div class="w-full h-full flex items-{{ item2.vertical_alignment }}">
+												<div class="block w-full"> 
+												{# - Content Type Repeater - #}
+												{% for item3 in item2.content_repeater %}
+													{% if item3.content_type == 'content_01' %}
+													  {# Content 01 #}
+														<div class="atmc-mega-menu_item atmc-mega-menu_content">
+															{{ item3.content }}
+														</div>
+													  {# /Content 01 #}
+													{% elif item3.content_type == 'cta_01' %}
+													  {# CTA 01 #}
+														<div class="atmc-mega-menu_item atmc-mega-menu_ctas h-full flex justify-center items-{{ item3.cta_position }}">
+															<div>
+																{% if item3.cta_option  == 'cta' %}
+																{% cta guid="{{ item3.cta }}" %}
+																{% else %}
+																<a href="{{ item3.button_url.href }}" class="atmc-btn atmc-btn-outline-white">{{ item3.button_text }}</a>
+																{% endif %}
+															</div>
+														</div>
+													  {# /CTA 01 #}
+													{% elif item3.content_type == 'logos_01' %}
+													  {# Logo 01 #}
+														<div class="atmc-mega-menu_item atmc-mega-menu_logos atmc-grid atmc-grid-{{ item3.items_per_row }}col">
+															{% for item4 in item3.logo %}
+															<div class="atmc-grid-col">
+																<img src="{{ item4.src }}" alt="{{ item4.alt }}">
+															</div>
+															{% endfor %}
+														</div>
+													  {# /Logo 01 #}
+													{% elif item3.content_type == 'menu_01' %}
+													  {# Menu 01 #}
+														<div class="atmc-mega-menu_item atmc-mega-menu_links">
+															{% simple_menu menu_tree="{{ item3.menu }}" %}
+														</div>
+													  {# /Menu 01 #}
+													{% elif item3.content_type == 'posts_01' %}
+													  {# Posts 01 #}
+													  {% if item3.blog_type == 'recent' %}
+													    {% set rec_posts = blog_recent_posts(item3.blog, item3.number_of_posts) %}
+														{% elif item3.blog_type == 'popular' %} 
+													    {% set rec_posts = blog_popular_posts(item3.blog, item3.number_of_posts) %}
+														{% endif %}
+														<div class="atmc-mega-menu_item atmc-mega-menu_post-wrapper atmc-grid atmc-grid-{{ item3.items_per_row }}col">
+															{% for rec_post in rec_posts %}
+																<a href="{{ rec_post.absolute_url }}" class="atmc-mega-menu_post atmc-hover-translateY atmc-grid-col">
+																	<div class="atmc-mega-menu_post-image block overflow-hidden atmc-ratio-16-9" style="background-image:url('{{ rec_post.featured_image }}');"></div>
+																	<p class="atmc-mega-menu_post-title mt-2 block {{ textColor }}" href="{{ rec_post.absolute_url }}">{{ rec_post.name }}</p>
+															  </a>
+															{% endfor %}
+														</div>
+													  {# /Posts 01 #}
+													{% elif item3.content_type == 'feature_01' %}
+													  {# Feature 01 #}
+														<a href="{{ item3.url.href }}" class="atmc-mega-menu_item atmc-mega-menu_feature_01 block {{ textColor }} text-center {% if item2.text_white %}text-white fill-white{% endif %}">
+															<div>
+																{% if item3.icon_type == 'icon' %}
+																	{% icon name="{{ item3.icon.name }}" style="{{ item3.icon.type }}" unicode="{{ item3.icon.unicode }}", no_wrapper=true %}
+																{% else %}
+																	<img src="{{ item3.image.src }}" alt="{{ item3.image.alt }}">
+																{% endif %}
+															</div>
+															<p>{{ item3.heading }}</p>
+														</a>
+													  {# /Feature 01 #}
+													{% endif %} 
+												{% endfor %}
+											{# - /Content Type Repeater - #}
+											</div>
+										</div>
+								  </div>
+								{% endfor %}
+								{# --- /Column Repeater --- #}
+							</div>
+							{% endfor %}
+						</div>
+			      {# ====================== /BUILDER Mega Menu ====================== #}
+			    {% endif %}
+			
+				{% endif %}
+			{% endif %}
+
+      {% require_css %}
+			<style>
+				{% for item in module.builder %}
+				{% set targetID = item.target %}
+				  {% for item2 in item.column_repeater %}
+				    {% if item2.column_background_option == 'image' && item2.column_overlay %}
+							.atmc-mega-menu_box-{{ targetID }} .atmc-mega-menu_col-{{ loop.index }}:before {
+								background-color: {{ item2.column_background_overlay.color }};
+								opacity: {{ item2.column_background_overlay.opacity/100 }};
+							}
+				    {% endif %}
+					{% endfor %}
+				{% endfor %}
+			</style>
+      {% end_require_css %}
+
+{% endmacro %}
+{# /Mega Menu #}
+
+{# ========================================================================== #}
+{# ---------------------------------- 1 ROW --------------------------------- #}
+{# ========================================================================== #}
+{% if module.variant == 'row_01_var_01' %}
+
+  {{ require_css(get_asset_url(basePath + '/css/_header_row_01_01.css')) }}
+
+  {# ======= HEADER Row 01 Var 01 ======= #}
+	<header class="atmc-header atmc-header_{{ module.settings.header_positioning }} atmc-header-{{ header_class }} {% if module.settings.header_text_white %}atmc-header-white{% else %}atmc-header-dark{% endif %}">
+		<div class="atmc-header_container">		
+
+			{# ----- Logo ----- #}
+			<div class="atmc-header_logo">
+				{% if header_class == 'transparent' || module.settings.header_text_white %}
+				<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_white">
+					{% if module.logos.logo_white.src %}
+					  {% set sizeAttrs = 'width="{{ module.logos.logo_white.width }}" height="{{ module.logos.logo_white.height }}"' %}
+					  {% if module.logos.logo_white.size_type == 'auto' %}
+					{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+					{% elif module.logos.logo_white.size_type == 'auto_custom_max' %}
+					  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_white.max_width }}px; max-height: {{ module.logos.logo_white.max_height }}px"' %}
+					{% endif %}
+					  <img src="{{ module.logos.logo_white.src }}" alt="{{ module.logos.logo_white.alt }}" {{ sizeAttrs }}>
+					{% endif %}
+				</a>
+				{% endif %}
+				<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_dark">
+					{% if module.logos.logo_dark.src %}
+					  {% set sizeAttrs = 'width="{{ module.logos.logo_dark.width }}" height="{{ module.logos.logo_dark.height }}"' %}
+					{% if module.logos.logo_dark.size_type == 'auto' %}
+					  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+					{% elif module.logos.logo_dark.size_type == 'auto_custom_max' %}
+					  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_dark.max_width }}px; max-height: {{ module.logos.logo_dark.max_height }}px"' %}
+					{% endif %}
+					  <img src="{{ module.logos.logo_dark.src }}" alt="{{ module.logos.logo_dark.alt }}" {{ sizeAttrs }}>
+					{% endif %}
+				</a>
+			</div>
+
+			{# ----- Menu ----- #}
+			{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+			<div class="atmc-header_menu-wrapper">
+				<div class="atmc-header_navigation">
+					<div class="atmc-header_menu">
+						{% menu id="{{ module.main_menu.menu }}", no_wrapper=True %}
+					</div>
+				</div>
+			</div>
+			{% endif %}
+
+			{# ----- Language Switcher and Search ----- #}
+			<div class="atmc-header_right">
+				<div class="atmc-header_language-switcher-wrapper h-full"></div>
+				{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+				  {% if module.settings.header_search %}
+						<div class="atmc-header_search_trigger-wrapper h-full"></div>
+					{% endif %}
+				{% endif %}
+			</div>
+			
+			{# ----- Mega Menu ----- #}
+			{{ atomic_mega_menu() }}
+
+		</div>
+	</header>
+
+  {% require_css %}
+		<style>
+			.atmc-header {
+				{% if module.settings.header_positioning == 'static' %}
+				  position: absolute;
+				{% else %}
+				  position: fixed;
+				{% endif %}
+			}
+			.atmc-header.sticky {
+				background-color: {{ module.settings.header_background_color.color }};
+			}
+			.atmc-header-default {
+				background-color: {{ module.settings.header_background_color.color }};
+			}
+			@media (max-width: 991px) {
+				.atmc-header {
+					background-color: {{ module.settings.header_background_color.color }};
+				}
+				.atmc-header-transparent {
+					{% if module.settings.header_positioning == 'static' %}
+					  position: absolute;
+					{% else %}
+					  position: fixed;
+					{% endif %}
+				}
+			}
+		</style>
+	{% end_require_css %}
+  {# ======= /HEADER Row 01 Var 01 ======= #}
+
+
+{% elif module.variant == 'row_01_var_02' %}
+
+  {{ require_css(get_asset_url(basePath + '/css/_header_row_01_02.css')) }}
+
+  {# ======= HEADER Row 01 Var 02 ======= #}
+  <header class="atmc-header atmc-header_{{ module.settings.header_positioning }} atmc-header-{{ header_class }} {% if module.settings.header_text_white %}atmc-header-white{% else %}atmc-header-dark{% endif %}">
+		<div class="atmc-header_container">
+
+			{# ----- Logo ----- #}
+			<div class="atmc-header_logo ds:order-2 w-3/6 ds:w-1/5 lg:text-center ds:flex ds:justify-center">
+				{% if header_class == 'transparent' || module.settings.header_top_text_white %}
+				<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_white">
+					{% if module.logos.logo_white.src %}
+					  {% set sizeAttrs = 'width="{{ module.logos.logo_white.width }}" height="{{ module.logos.logo_white.height }}"' %}
+					{% if module.logos.logo_white.size_type == 'auto' %}
+					  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+					{% elif module.logos.logo_white.size_type == 'auto_custom_max' %}
+					  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_white.max_width }}px; max-height: {{ module.logos.logo_white.max_height }}px"' %}
+					{% endif %}
+					  <img src="{{ module.logos.logo_white.src }}" alt="{{ module.logos.logo_white.alt }}" {{ sizeAttrs }}>
+					{% endif %}
+				</a>
+				{% endif %}
+				<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_dark">
+					{% if module.logos.logo_dark.src %}
+					  {% set sizeAttrs = 'width="{{ module.logos.logo_dark.width }}" height="{{ module.logos.logo_dark.height }}"' %}
+					{% if module.logos.logo_dark.size_type == 'auto' %}
+					  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+					{% elif module.logos.logo_dark.size_type == 'auto_custom_max' %}
+					  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_dark.max_width }}px; max-height: {{ module.logos.logo_dark.max_height }}px"' %}
+					{% endif %}
+					  <img src="{{ module.logos.logo_dark.src }}" alt="{{ module.logos.logo_dark.alt }}" {{ sizeAttrs }}>
+					{% endif %}
+				</a>
+			</div>
+
+			 
+			<div class="atmc-header_right ds:order-3 ds:w-2/5 ds:text-right ds:flex justify-end">
+				
+				{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+					{# ----- Secondary Menu ----- #}
+					<div class="atmc-header_secondary-menu h-full mb:hidden tb:hidden ds:block">
+						{% simple_menu menu_tree="{{ module.secondary_menu.menu }}" %}
+					</div>
+			  {% endif %}
+				
+				{# ----- Language Switcher and Search ----- #}
+				<div class="atmc-header_language-switcher-wrapper"></div>
+				{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+					{% if module.settings.header_search %}
+						<div class="atmc-header_search_trigger-wrapper h-full"></div>
+					{% endif %}
+				{% endif %}
+			</div>
+			
+			{# ----- Menu ----- #}
+			<div class="ds:order-1 ds:block ds:w-2/5">
+				 {% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+					<div class="atmc-header_menu-wrapper">
+						<div class="atmc-header_navigation">
+							<div class="atmc-header_menu">
+								{% menu id="{{ module.main_menu.menu }}", no_wrapper=True %}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			
+			{# MEGA MENU #}
+			{{ atomic_mega_menu() }}
+
+		</div>
+  </header>
+  
+	{% require_css %}
+	<style>
+		.atmc-header {
+				{% if module.settings.header_positioning == 'static' %}
+				  position: absolute;
+				{% else %}
+				  position: fixed;
+				{% endif %}
+			}
+		.atmc-header {
+			background-color: {{ module.settings.header_background_color.color }};
+		}
+		@media (max-width:991px) {
+			.atmc-header-transparent {
+				{% if module.settings.header_positioning == 'static' %}
+				  position: absolute;
+				{% else %}
+				  position: fixed;
+				{% endif %}
+			}
+		}
+	</style>
+	{% end_require_css %}
+{% require_js %}
+<script>
+	$(function() {
+		var simpleMenu = $('.atmc-header_simple-menu .hs-menu-wrapper > ul > li').clone().addClass('ds:hidden');
+		$('.atmc-header_menu .hs-menu-wrapper > ul').append(simpleMenu);
+	});
+</script>
+{% end_require_js %}
+  {# ======= /HEADER Row 01 Var 02 ======= #}
+
+
+{% endif %}
+
+
+{# ========================================================================== #}
+{# ---------------------------------- 2 ROWS -------------------------------- #}
+{# ========================================================================== #}
+
+{% if module.variant == 'row_02_var_01' %}
+
+  {{ require_css(get_asset_url(basePath + '/css/_header_row_02_01.css')) }}
+
+  {# ======= HEADER 01 ======= #}
+	<header class="atmc-header atmc-header_{{ module.settings.header_positioning }} atmc-header-{{ header_class }}">
+		
+		{# ----- Header Top ----- #}
+		{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+		<div class="atmc-header-top">
+			<div class="atmc-container {% if module.settings.header_top_text_white %}text-white{% endif %}">
+				<div class="atmc-header_info-repeater">
+					{% for item in module.company_info.company_info_repeater %}
+					<a href="{{ item.url.href }}">
+						{% icon name="{{ item.icon.name }}" style="{{ item.icon.type }}" unicode="{{ item.icon.unicode }}", no_wrapper=true %} {{ item.text_detail }}
+					</a>
+					{% endfor %}
+				</div>
+				<div class="atmc-header_loc-repeater mb:hidden">
+					{% for item in module.location.location_repeater %}
+					<div>
+						{% icon name="{{ item.icon.name }}" style="{{ item.icon.type }}" unicode="{{ item.icon.unicode }}", no_wrapper=true %} {{ item.location }}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		<div class="atmc-header-bottom {% if module.settings.header_text_white %}atmc-header-white{% else %}atmc-header-dark{% endif %}">
+			<div class="atmc-header_container">
+
+				{# ----- Logo ----- #}
+				<div class="atmc-header_logo">
+					{% if header_class == 'transparent' || module.settings.header_text_white %}
+					<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_white">
+						{% if module.logos.logo_white.src %}
+						  {% set sizeAttrs = 'width="{{ module.logos.logo_white.width }}" height="{{ module.logos.logo_white.height }}"' %}
+						{% if module.logos.logo_white.size_type == 'auto' %}
+						  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+						{% elif module.logos.logo_white.size_type == 'auto_custom_max' %}
+						  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_white.max_width }}px; max-height: {{ module.logos.logo_white.max_height }}px"' %}
+						{% endif %}
+						  <img src="{{ module.logos.logo_white.src }}" alt="{{ module.logos.logo_white.alt }}" {{ sizeAttrs }}>
+						{% endif %}
+					</a>
+					{% endif %}
+					<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_dark">
+						{% if module.logos.logo_dark.src %}
+						  {% set sizeAttrs = 'width="{{ module.logos.logo_dark.width }}" height="{{ module.logos.logo_dark.height }}"' %}
+						{% if module.logos.logo_dark.size_type == 'auto' %}
+						  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+						{% elif module.logos.logo_dark.size_type == 'auto_custom_max' %}
+						  {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_dark.max_width }}px; max-height: {{ module.logos.logo_dark.max_height }}px"' %}
+						{% endif %}
+						  <img src="{{ module.logos.logo_dark.src }}" alt="{{ module.logos.logo_dark.alt }}" {{ sizeAttrs }}>
+						{% endif %}
+					</a>
+				</div>
+
+				<div class="atmc-header_right h-full">
+					{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+					{# ----- Menu ----- #}
+					<div class="atmc-header_menu-wrapper">
+						<div class="atmc-header_navigation">
+							<div class="atmc-header_menu">
+								{% menu id="{{ module.main_menu.menu }}", no_wrapper=True %}
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+					{# ----- Language Switcher and Search ----- #}
+					<div class="atmc-header_language-switcher-wrapper"></div>
+					{% if widget_data.header.value != 'Landing' %}
+						{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+							{% if module.settings.header_search %}
+							  <div class="atmc-header_search_trigger-wrapper"></div>
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				</div>
+
+				{# ----- Mega Menu ----- #}
+				{{ atomic_mega_menu() }}
+
+			</div>
+		</div>
+	</header>
+
+  {% require_css %}
+		<style>
+			.atmc-header {
+				{% if module.settings.header_positioning == 'static' %}
+				  position: absolute;
+				{% else %}
+				  position: fixed;
+				{% endif %}
+			}
+			.atmc-header-top {
+				background-color: {{ module.settings.header_top_background_color.color }};
+			}
+			.atmc-header.sticky {
+				background-color: {{ module.settings.header_background_color.color }};
+			}
+			.atmc-header-default {
+				background-color: {{ module.settings.header_background_color.color }};
+			}
+			@media (max-width: 991px) {
+				.atmc-header {
+					background-color: {{ module.settings.header_background_color.color }};
+				}
+				.atmc-header-transparent {
+					{% if module.settings.header_positioning == 'static' %}
+					  position: absolute;
+					{% else %}
+					  position: fixed;
+					{% endif %}
+				}
+			}
+		</style>
+	{% end_require_css %}
+  {# ======= /HEADER 01 ======= #}
+
+{% elif module.variant == 'row_02_var_02' %}
+
+  {{ require_css(get_asset_url(basePath + '/css/_header_row_02_02.css')) }}
+
+  {# ======= HEADER 02 ======= #}
+  <header class="atmc-header atmc-header_{{ module.settings.header_positioning }} atmc-header-{{ header_class }}">
+	
+		{# ----- Header Top ----- #}
+		{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+		<div class="atmc-header-top {% if module.settings.header_top_text_white %}text-white{% endif %} py-2 mb:text-center">
+			<div class="atmc-header_container">
+				<div class="ds:flex ds:justify-between ds:items-center w-full">
+					<div class="atmc-header-top_text">
+						{{ module.tagline.tagline }}
+					</div>
+					<div class="atmc-header_info-repeater flex items-center flex-wrap justify-end mb:justify-center">
+						{% for item in module.company_info.company_info_repeater %}
+							<a href="{{ item.url.href }}">
+								{% icon name="{{ item.icon.name }}" style="{{ item.icon.type }}" unicode="{{ item.icon.unicode }}", no_wrapper=true %} {{ item.text_detail }}
+							</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	
+		<div class="{% if module.settings.header_text_white %}atmc-header-white{% else %}atmc-header-dark{% endif %}">
+			<div class="atmc-header_container">
+
+				{# ----- Logo ----- #}
+				<div class="atmc-header_logo">
+					{% if header_class == 'transparent' || module.settings.header_text_white %}
+					<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_white">
+						{% if module.logos.logo_white.src %}
+						{% set sizeAttrs = 'width="{{ module.logos.logo_white.width }}" height="{{ module.logos.logo_white.height }}"' %}
+						{% if module.logos.logo_white.size_type == 'auto' %}
+						{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+						{% elif module.logos.logo_white.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_white.max_width }}px; max-height: {{ module.logos.logo_white.max_height }}px"' %}
+						{% endif %}
+						<img src="{{ module.logos.logo_white.src }}" alt="{{ module.logos.logo_white.alt }}" {{ sizeAttrs }}>
+						{% endif %}
+					</a>
+					{% endif %}
+					<a href="{{ module.logos.logo_url.href }}" class="atmc-header_logo_dark">
+						{% if module.logos.logo_dark.src %}
+						{% set sizeAttrs = 'width="{{ module.logos.logo_dark.width }}" height="{{ module.logos.logo_dark.height }}"' %}
+						{% if module.logos.logo_dark.size_type == 'auto' %}
+						{% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+						{% elif module.logos.logo_dark.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.logos.logo_dark.max_width }}px; max-height: {{ module.logos.logo_dark.max_height }}px"' %}
+						{% endif %}
+						<img src="{{ module.logos.logo_dark.src }}" alt="{{ module.logos.logo_dark.alt }}" {{ sizeAttrs }}>
+						{% endif %}
+					</a>
+				</div>
+
+				{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+					{# ----- Menu ----- #}
+					<div class="atmc-header_menu-wrapper">
+						<div class="atmc-header_navigation">
+							<div class="atmc-header_menu">
+								{% menu id="{{ module.main_menu.menu }}", no_wrapper=True %}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+
+				
+				<div class="atmc-header_right">
+					{# ----- Language Switcher and Search ----- #}
+					<div class="atmc-header_language-switcher-wrapper"></div>
+					{% if widget_data.header.value != 'Landing' %}
+						{% if widget_data.header.value != 'Landing' && widget_data.header.value != 'Landing Transparent' %}
+							{% if module.settings.header_search %}
+							  <div class="atmc-header_search_trigger-wrapper"></div>
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				</div>
+
+				{# Mega Menu #}
+			  {{ atomic_mega_menu() }}
+
+			</div>
+		</div>
+		
+  </header>
+  
+	{% require_css %}
+	<style>
+		.atmc-header {
+			{% if module.settings.header_positioning == 'static' %}
+			position: absolute;
+			{% else %}
+			position: fixed;
+			{% endif %}
+		}
+		.atmc-header-top {
+			background-color: {{ module.settings.header_top_background_color.color }};
+		}
+		.atmc-header.sticky {
+			background-color: {{ module.settings.header_background_color.color }};
+		}
+		.atmc-header-default {
+			background-color: {{ module.settings.header_background_color.color }};
+		}
+		@media (max-width:991px) {
+			.atmc-header-transparent {
+				{% if module.settings.header_positioning == 'static' %}
+				  position: absolute;
+				{% else %}
+				  position: fixed;
+				{% endif %}
+			}
+			.atmc-header {
+				background-color: {{ module.settings.header_background_color.color }};
+			}
+		}
+	</style>
+	{% end_require_css %}
+  {# ======= /HEADER 02 ======= #}
+
+{% endif %}
