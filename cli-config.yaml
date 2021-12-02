@@ -1,0 +1,25 @@
+hapikey: c129af80-b0fb-4dfc-b3b0-2f0919f880d7
+pathToContextDir: context
+username: null
+password: null
+portalId: '19626047'
+download-blogs:
+  limit: null
+download-content:
+  limit: null
+download-default-modules:
+  limit: null
+download-designs:
+  outDir: designs
+download-hubdb:
+  batchSize: 1
+download-layouts:
+  limit: null
+download-menus:
+  limit: null
+download-resource-mappings:
+  limit: null
+ftp-upload:
+  designsPath: designs
+  files:
+    - null
